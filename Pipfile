@@ -8,6 +8,10 @@ verify_ssl = true
 [packages]
 pywsse = "*"
 requests = "*"
+python-dateutil = "*"
+pyyaml = "*"
+six = "*"
+confuse = "*"
 
 [requires]
 python_version = "3.7"
