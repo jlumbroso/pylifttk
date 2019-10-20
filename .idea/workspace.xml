@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pylifttk/codepost/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/codepost/macros.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/csstaff/macros.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/csstaff/util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/ed/macros.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/gradescope/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/gradescope/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/gradescope/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/gradescope/macros.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/gradescope/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/ed/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/ed/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/ed/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/ed/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/ed/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/ed/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +66,7 @@
       <updated>1571368836312</updated>
       <workItem from="1571368840989" duration="4230000" />
       <workItem from="1571528895565" duration="5011000" />
-      <workItem from="1571536613397" duration="9497000" />
+      <workItem from="1571536613397" duration="9552000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -128,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571540054179</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added codePost and Gradescope integration">
+      <created>1571553051848</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571553051848</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +143,8 @@
     <MESSAGE value="Added code to interact with the Ed platform" />
     <MESSAGE value="Fix for Python 2.x compatibility" />
     <MESSAGE value="Other fix for Python 2.x compatibility" />
-    <option name="LAST_COMMIT_MESSAGE" value="Other fix for Python 2.x compatibility" />
+    <MESSAGE value="Added codePost and Gradescope integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added codePost and Gradescope integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
