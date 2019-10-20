@@ -4,9 +4,9 @@ import typing as _typing
 
 import six as _six
 
-import pylifttk.csstaff.api as _api
-import pylifttk.csstaff.exceptions as _exc
-import pylifttk.csstaff.util as _util
+import pylifttk.csstaff.api
+import pylifttk.csstaff.exceptions
+import pylifttk.csstaff.util
 
 
 ASDICT_STUDENT_KEY = 'netid'
@@ -25,11 +25,11 @@ def course(course_name=None, as_dict=False, simple=False):
 
     # Build endpoint
     endpoint = "course/"
-    if course_name and _util.validate_course_name(course_name):
+    if course_name and pylifttk.csstaff.util.validate_course_name(course_name):
         endpoint += course_name
 
     # Make request
-    result = _api.request(endpoint=endpoint)
+    result = pylifttk.csstaff.api.request(endpoint=endpoint)
 
     # Post-process result
     if simple:
@@ -45,7 +45,7 @@ def course(course_name=None, as_dict=False, simple=False):
 
 
 def course_staff(course_name, category=None, flatten=True):
-    _util.validate_course_name(course_name)
+    pylifttk.csstaff.util.validate_course_name(course_name)
 
     result = course(course_name=course_name)
 
@@ -64,7 +64,7 @@ def course_staff(course_name, category=None, flatten=True):
                     # concatenate
                     people = people + staff[c]
                 else:
-                    raise _exc.CourseAPIException(
+                    raise pylifttk.csstaff.exceptions.CourseAPIException(
                         msg="Category '%s' invalid for course '%s'." %
                         (course_name, c))
 
@@ -92,12 +92,12 @@ def course_enrollment(course_name, as_dict=False, force_refresh=False):
     using the NetID as the key.
     """
 
-    _util.validate_course_name(course_name)
+    pylifttk.csstaff.util.validate_course_name(course_name)
 
     endpoint = "course_enrollment/{}".format(course_name)
 
     # Make request
-    result = _api.request(endpoint=endpoint)
+    result = pylifttk.csstaff.api.request(endpoint=endpoint)
 
     if as_dict:
         result = dict([

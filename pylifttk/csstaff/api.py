@@ -7,8 +7,8 @@ import requests as _requests
 import six as _six
 import wsse.client.requests.auth as _wsse_auth
 
-import pylifttk.csstaff
 import pylifttk.csstaff.exceptions
+import pylifttk.csstaff.util
 
 
 API_BASE_URL = "https://adm.cs.princeton.edu/api/v1/"
@@ -31,8 +31,8 @@ def request(endpoint=None, url=None):
         res = _requests.get(
             url=url,
             auth=_wsse_auth.WSSEAuth(
-                username=pylifttk.csstaff.config["username"],
-                password=pylifttk.csstaff.config["password"]),
+                username=pylifttk.csstaff.util.config["username"],
+                password=pylifttk.csstaff.util.config["password"]),
             # Avoid WSSE nonce error when redirecting
             allow_redirects=False,
         )

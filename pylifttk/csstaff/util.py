@@ -1,5 +1,20 @@
 
+import pylifttk
+
 import pylifttk.csstaff.exceptions
+
+
+SECTION_NAME = "csstaff"
+
+
+config = pylifttk.get_local_config(
+    section=SECTION_NAME,
+    template={
+        SECTION_NAME: {
+            "username": str,
+            "password": str,
+        },
+    })
 
 
 def validate_course_name(name, silent=False):

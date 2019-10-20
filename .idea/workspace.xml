@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pylifttk/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/jlumbroso.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/gradescope/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/gradescope/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/gradescope/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/gradescope/macros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/macros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/ed/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/ed/macros.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,6 +31,7 @@
   <component name="ProjectId" id="1SMM6cY1FrPM8opjKYbNah0jFrt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pylifttk/codepost" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -167,21 +170,5 @@
     <MESSAGE value="v0.0.4" />
     <MESSAGE value="v0.0.5, with codepost dependency properly added to setup.py" />
     <option name="LAST_COMMIT_MESSAGE" value="v0.0.5, with codepost dependency properly added to setup.py" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pylifttk/csstaff/exceptions.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pylifttk/gradescope/__init__.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -1,10 +1,10 @@
 
 
-import pylifttk.ed.api as _api
+import pylifttk.ed.api
 
 
 def invite_one(course_id, name, email, tutorial, role="student"):
-    result = _api.request(
+    result = pylifttk.ed.api.request(
         endpoint="courses/{}/invite".format(course_id),
         json={
             "invites": [
@@ -21,7 +21,7 @@ def invite_one(course_id, name, email, tutorial, role="student"):
 
 
 def invite_many(course_id, users, role="student"):
-    result = _api.request(
+    result = pylifttk.ed.api.request(
         endpoint="courses/{}/invite".format(course_id),
         json={
             "invites": [
@@ -34,7 +34,7 @@ def invite_many(course_id, users, role="student"):
 
 
 def unenroll(course_id, user_ids):
-    result = _api.request(
+    result = pylifttk.ed.api.request(
         endpoint="courses/{}/unenroll".format(course_id),
         json={
             "user_ids": user_ids
@@ -45,7 +45,9 @@ def unenroll(course_id, user_ids):
 
 
 def users(course_id):
-    result = _api.request(endpoint="courses/{}/admin".format(course_id))
+    result = pylifttk.ed.api.request(
+        endpoint="courses/{}/admin".format(course_id)
+    )
 
     if "users" in result:
         return result.get("users", [])

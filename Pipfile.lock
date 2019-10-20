@@ -69,11 +69,11 @@
         },
         "codepost": {
             "hashes": [
-                "sha256:49b15a28d97b17877c6b5eac4f50b62cccc379f309c730dea05894c8f9b11da6",
-                "sha256:89f2a5300f1489eff44143df0c9b2943db92880c1123f273234c3afd1a2197ef"
+                "sha256:909785067e2d4200587f47b4d204b8bc1a25c8987350f5b151bdb761b3d3a3e1",
+                "sha256:9882a45f0c484aa42b009f77c4678ef937b247f050459bd2dfca9ee4ccfe2184"
             ],
             "index": "pypi",
-            "version": "==0.1.12"
+            "version": "==0.1.14"
         },
         "colorama": {
             "hashes": [
@@ -127,6 +127,13 @@
             "index": "pypi",
             "version": "==2.8.0"
         },
+        "python-forge": {
+            "hashes": [
+                "sha256:bf91f9a42150d569c2e9a0d90ab60a8cbed378bdf185e5120532a3481067395c"
+            ],
+            "markers": "python_version > '3.5'",
+            "version": "==18.6.0"
+        },
         "pywsse": {
             "hashes": [
                 "sha256:faa12c66f385f4b680a75c2ace4e104fa9657b921b25ae977391b98e309f1e4c"
@@ -175,13 +182,6 @@
                 "sha256:b91d676b330a0ebd5b21719cb6e9b57c57d433671f65b9c28dd3461d9a1ed0b6"
             ],
             "version": "==1.9.4"
-        },
-        "typeguard": {
-            "hashes": [
-                "sha256:5269435c8c98f4c4861dd69f3de755aaab5e163991b7ce1e0eff7ae6472957dd",
-                "sha256:ca77fe94688dd003c37fc1d04a1c1d824ea3b873ef056766ad8590ce40d506e3"
-            ],
-            "version": "==2.5.1"
         },
         "typing": {
             "hashes": [
@@ -239,7 +239,7 @@
                 "sha256:5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0",
                 "sha256:8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
             ],
-            "markers": "platform_system == 'Darwin'",
+            "markers": "sys_platform == 'darwin'",
             "version": "==0.1.0"
         },
         "backcall": {
