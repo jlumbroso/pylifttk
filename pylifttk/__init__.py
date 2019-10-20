@@ -33,4 +33,19 @@ class PyLIFTtkConfiguration(_confuse.LazyConfig):
         return super(PyLIFTtkConfiguration, self).__init__()
 
 
+class PyLIFTtkConfigurationException(Exception):
+
+    def __init__(self, section=None, src=None):
+        msg = "There is an error with the configuration file.\n\n"
+
+        if section is not None:
+            msg = ("The configuration file does not contain the"
+                   "correct parameters for {}.\n\n").format(section)
+
+        if src is not None:
+            msg += "Original message was: {}\n\n".format(src)
+
+        super(PyLIFTtkConfigurationException, self).__init__(msg)
+
+
 config = PyLIFTtkConfiguration('pylifttk', __name__)
