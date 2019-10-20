@@ -31,6 +31,8 @@ setup(
     ],
     packages=find_packages(),
     install_requires=[
+        "bs4",
+        "codepost",
         "confuse",
         "python-dateutil",
         "pywsse",
