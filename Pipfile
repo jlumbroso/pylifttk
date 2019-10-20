@@ -13,6 +13,8 @@ python-dateutil = "*"
 pyyaml = "*"
 six = "*"
 confuse = "*"
+bs4 = "*"
+codepost = "*"
 
 [requires]
 python_version = "3.7"

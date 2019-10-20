@@ -13,3 +13,6 @@ config = pylifttk.get_local_config(
             "password": str,
         },
     })
+
+# Import top-level methods
+from pylifttk.csstaff.macros import *

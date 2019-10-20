@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="Fix for Python 2.x compatibility">
+    <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pylifttk/codepost/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/codepost/macros.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/csstaff/macros.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/csstaff/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/ed/macros.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/gradescope/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/gradescope/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/gradescope/exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/gradescope/macros.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/gradescope/util.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/ed/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/ed/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/ed/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/ed/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/ed/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/ed/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/ed/exceptions.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +42,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pylifttk/ed" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pylifttk/codepost" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -41,6 +52,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pylifttk/codepost" />
+      <recent name="$PROJECT_DIR$/pylifttk/gradescope" />
       <recent name="$PROJECT_DIR$/pylifttk/ed" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -71,7 +84,7 @@
       <updated>1571368836312</updated>
       <workItem from="1571368840989" duration="4230000" />
       <workItem from="1571528895565" duration="5011000" />
-      <workItem from="1571536613397" duration="3339000" />
+      <workItem from="1571536613397" duration="9497000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -108,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571539004437</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Other fix for Python 2.x compatibility">
+      <created>1571540054179</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571540054179</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +153,8 @@
     <MESSAGE value="Added raw request method for CSstaff's Course API" />
     <MESSAGE value="Added code to interact with the Ed platform" />
     <MESSAGE value="Fix for Python 2.x compatibility" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix for Python 2.x compatibility" />
+    <MESSAGE value="Other fix for Python 2.x compatibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="Other fix for Python 2.x compatibility" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -142,6 +163,11 @@
           <url>file://$PROJECT_DIR$/pylifttk/csstaff/exceptions.py</url>
           <line>1</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pylifttk/gradescope/__init__.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

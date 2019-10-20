@@ -3,7 +3,7 @@ from __future__ import absolute_import
 
 import pylifttk
 
-SECTION_NAME = "ed"
+SECTION_NAME = "gradescope"
 
 config = pylifttk.get_local_config(
     section=SECTION_NAME,
@@ -16,4 +16,4 @@ config = pylifttk.get_local_config(
 
 
 # Import top-level methods
-from pylifttk.ed.macros import *
+from pylifttk.gradescope.macros import *

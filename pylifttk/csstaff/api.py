@@ -52,3 +52,4 @@ def request(endpoint=None, url=None):
     # If we've made this far, the result should contain a "result" key
     data = res.json()
     return data.get("result", dict())
+

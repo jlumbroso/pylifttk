@@ -42,7 +42,7 @@ class PyLIFTtkConfigurationException(Exception):
         msg = "There is an error with the configuration file.\n\n"
 
         if section is not None:
-            msg = ("The configuration file does not contain the"
+            msg = ("The configuration file does not contain the "
                    "correct parameters for {}.\n\n").format(section)
 
         if src is not None:

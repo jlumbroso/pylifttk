@@ -42,8 +42,8 @@ def get_auth_token(username=None, password=None):
                 "Content-Type": "application/json; charset=utf-8",
             },
             data=_json.dumps({
-                "login": username or pylifttk.ed.util["username"],
-                "password": password or pylifttk.ed.util["password"]
+                "login": username or pylifttk.ed.config["username"],
+                "password": password or pylifttk.ed.config["password"]
             })
         )
 
@@ -64,11 +64,14 @@ def get_auth_token(username=None, password=None):
     return token
 
 
-def request(endpoint=None, url=None, data=None):
-    # type: (_typing.Optional[str], _typing.Optional[str], _typing.Optional[dict]) -> _typing.DefaultDict
+def request(endpoint=None, url=None, data=None, json=None, **kwargs):
+    # type: (_typing.Optional[str], _typing.Optional[str], _typing.Optional[dict], _typing.Dict) -> _typing.DefaultDict
     """
     Make a request directly to the Ed platform's API.
     """
+
+    if last_token is None:
+        get_auth_token(**kwargs)
 
     # If only endpoint was passed, augment with base URL
     if endpoint is not None:
@@ -77,21 +80,39 @@ def request(endpoint=None, url=None, data=None):
             url=endpoint,
         )
 
+    headers = {
+        "Sec-Fetch-Mode": "cors",
+        "Origin": "https://us.edstem.org",
+        "X-Token": last_token,
+        "Pragma": "no-cache",
+        "Content-Type": "application/json",
+        "Accept": "*/*",
+        "Cache-Control": "no-cache",
+        "Authority": "us.edstem.org",
+        "Sec-Fetch-Site": "same-origin",
+    }
+
     try:
-        res = _requests.get(
-            url=url,
-            headers={
-                "Sec-Fetch-Mode": "cors",
-                "Origin": "https://us.edstem.org",
-                "X-Token": last_token,
-                "Pragma": "no-cache",
-                "Content-Type": "application/json",
-                "Accept": "*/*",
-                "Cache-Control": "no-cache",
-                "Authority": "us.edstem.org",
-                "Sec-Fetch-Site": "same-origin",
-            },
-        )
+
+        if data is None and json is None:
+            res = _requests.get(
+                url=url,
+                headers=headers,
+            )
+
+        elif json is not None:
+            res = _requests.post(
+                url=url,
+                headers=headers,
+                json=json,
+            )
+
+        else:
+            res = _requests.post(
+                url=url,
+                headers=headers,
+                data=data,
+            )
 
         if res.status_code == 301 and url[-1] != "/":
             return request(url="{}/".format(url))
