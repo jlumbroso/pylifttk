@@ -2,9 +2,12 @@ course: ""
 term: ""
 
 csstaff:
-  user: ""
+  username: ""
   password: ""
 
 codePost:
   api_key: ""
 
+ed:
+  username: ""
+  password: ""

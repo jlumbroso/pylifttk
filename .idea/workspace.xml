@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pylifttk/csstaff/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/csstaff/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/csstaff/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/csstaff/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/csstaff/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/ed/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/ed/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/ed/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/ed/exceptions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/config_default.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/config_default.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/exceptions.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +34,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pylifttk/ed" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -41,6 +43,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pylifttk/ed" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -69,6 +74,7 @@
       <updated>1571368836312</updated>
       <workItem from="1571368840989" duration="4230000" />
       <workItem from="1571528895565" duration="5011000" />
+      <workItem from="1571536613397" duration="1731000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -84,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571372607024</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added raw request method for CSstaff's Course API">
+      <created>1571536650707</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571536650707</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="More boilerplate configuration and package setup" />
     <MESSAGE value="Added configuration file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added configuration file" />
+    <MESSAGE value="Added raw request method for CSstaff's Course API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added raw request method for CSstaff's Course API" />
   </component>
 </project>

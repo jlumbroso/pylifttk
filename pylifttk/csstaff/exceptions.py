@@ -57,7 +57,7 @@ def get_external_ip():
         return None
 
 
-def handle_course_api_error(res):
+def handle_api_error(res):
     # type: (_requests.Response) -> _typing.Optional[_typing.Dict]
 
     # Exit on malformed argument or successful status code

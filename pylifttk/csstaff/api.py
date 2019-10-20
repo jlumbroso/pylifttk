@@ -13,12 +13,9 @@ API_BASE_URL = "https://adm.cs.princeton.edu/api/v1/"
 
 
 def request(endpoint=None, url=None):
-    # type: (_typing.Optional[str], _typing.Optional[str]) -> _requests.Response
+    # type: (_typing.Optional[str], _typing.Optional[str]) -> _typing.DefaultDict
     """
-
-    :param endpoint:
-    :param url:
-    :return:
+    Make a request directly to the Princeton CSStaff's Course API.
     """
 
     # If only endpoint was passed, augment with base URL
@@ -32,7 +29,7 @@ def request(endpoint=None, url=None):
         res = _requests.get(
             url=url,
             auth=_wsse_auth.WSSEAuth(
-                username=pylifttk.csstaff.config["user"],
+                username=pylifttk.csstaff.config["username"],
                 password=pylifttk.csstaff.config["password"]),
             # Avoid WSSE nonce error when redirecting
             allow_redirects=False,
@@ -48,7 +45,7 @@ def request(endpoint=None, url=None):
         )
 
     # Handle API errors
-    pylifttk.csstaff.exceptions.handle_course_api_error(res)
+    pylifttk.csstaff.exceptions.handle_api_error(res)
 
     # If we've made this far, the result should contain a "result" key
     data = res.json()

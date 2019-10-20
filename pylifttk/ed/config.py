@@ -4,7 +4,7 @@ import confuse as _confuse
 import pylifttk
 
 
-SECTION_NAME = "csstaff"
+SECTION_NAME = "ed"
 
 
 template = {
