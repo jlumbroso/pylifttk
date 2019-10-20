@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 pylifttk
 
@@ -50,3 +52,17 @@ class PyLIFTtkConfigurationException(Exception):
 
 
 config = PyLIFTtkConfiguration('pylifttk', __name__)
+
+
+def get_local_config(section, template):
+
+    try:
+        valid = config.get(template)
+
+    except _confuse.NotFoundError as exc:
+        raise PyLIFTtkConfigurationException(
+            section=section,
+            src=exc.args,
+        )
+
+    return valid[section]

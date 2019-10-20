@@ -42,8 +42,8 @@ def get_auth_token(username=None, password=None):
                 "Content-Type": "application/json; charset=utf-8",
             },
             data=_json.dumps({
-                "login": username or pylifttk.ed.config["username"],
-                "password": password or pylifttk.ed.config["password"]
+                "login": username or pylifttk.ed.util["username"],
+                "password": password or pylifttk.ed.util["password"]
             })
         )
 

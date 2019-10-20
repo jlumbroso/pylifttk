@@ -1,6 +1,15 @@
 
 from __future__ import absolute_import
 
-import pylifttk.ed.config as _config
+import pylifttk
 
-config = _config.get_local_config()
+SECTION_NAME = "ed"
+
+config = pylifttk.get_local_config(
+    section=SECTION_NAME,
+    template={
+        SECTION_NAME: {
+            "username": str,
+            "password": str,
+        },
+    })
