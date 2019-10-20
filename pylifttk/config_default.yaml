@@ -11,3 +11,10 @@ codePost:
 ed:
   username: ""
   password: ""
+
+gradescope:
+  username: ""
+  password: ""
+
+tigerfile:
+  token: ""
