@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pylifttk/csstaff/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/ed/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/ed/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/ed/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/ed/exceptions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/config_default.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/config_default.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/csstaff/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/csstaff/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/ed/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/ed/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/ed/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/ed/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +71,7 @@
       <updated>1571368836312</updated>
       <workItem from="1571368840989" duration="4230000" />
       <workItem from="1571528895565" duration="5011000" />
-      <workItem from="1571536613397" duration="1731000" />
+      <workItem from="1571536613397" duration="2280000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -97,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571536650707</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added code to interact with the Ed platform">
+      <created>1571538469807</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571538469807</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +124,18 @@
     <MESSAGE value="More boilerplate configuration and package setup" />
     <MESSAGE value="Added configuration file" />
     <MESSAGE value="Added raw request method for CSstaff's Course API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added raw request method for CSstaff's Course API" />
+    <MESSAGE value="Added code to interact with the Ed platform" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added code to interact with the Ed platform" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pylifttk/csstaff/exceptions.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

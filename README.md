@@ -1,2 +1,3 @@
 # pylifttk
-Utility library for the Princeton COS' LIFT.
+
+This is a Python utility library for Princeton COS' LIFT.

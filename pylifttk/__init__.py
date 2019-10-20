@@ -10,6 +10,7 @@ Provides a convenient toolkit of methods for use within Princeton CS' LIFT.
 License: Copyright (c) 2019 Jérémie Lumbroso, licensed under the LGPL3 license
 """
 
+from __future__ import absolute_import
 
 # Documentation
 
