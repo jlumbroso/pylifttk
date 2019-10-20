@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pylifttk/util.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/gradescope/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/gradescope/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/gradescope/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/gradescope/macros.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +72,7 @@
       <updated>1571368836312</updated>
       <workItem from="1571368840989" duration="4230000" />
       <workItem from="1571528895565" duration="5011000" />
-      <workItem from="1571536613397" duration="9688000" />
+      <workItem from="1571536613397" duration="11911000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -126,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571553073252</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="v0.0.5, with codepost dependency properly added to setup.py">
+      <created>1571553257296</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1571553257296</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +165,8 @@
     <MESSAGE value="Other fix for Python 2.x compatibility" />
     <MESSAGE value="Added codePost and Gradescope integration" />
     <MESSAGE value="v0.0.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.0.4" />
+    <MESSAGE value="v0.0.5, with codepost dependency properly added to setup.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.0.5, with codepost dependency properly added to setup.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

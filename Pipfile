@@ -15,6 +15,7 @@ six = "*"
 confuse = "*"
 bs4 = "*"
 codepost = "*"
+enum34 = "*"
 
 [requires]
 python_version = "3.7"

@@ -1,8 +1,26 @@
 
+import collections as _collections
+import typing as _typing
+
 import bs4 as _bs4
+
+import pylifttk.util
 
 import pylifttk.gradescope.api
 import pylifttk.gradescope.util
+
+
+class GradescopeRole(pylifttk.util.DocEnum):
+
+    # <option value="0">Student</option>
+    # <option selected="selected" value="1">Instructor</option>
+    # <option value="2">TA</option>
+    # <option value="3">Reader</option>
+
+    STUDENT = 0, "Student user"
+    INSTRUCTOR = 1, "Instructor user"
+    TA = 2, "TA user"
+    READER = 3, "Reader user"
 
 
 def get_assignment_grades(course_id, assignment_id, simplified=False, **kwargs):
@@ -21,6 +39,40 @@ def get_assignment_grades(course_id, assignment_id, simplified=False, **kwargs):
         return shortened_grades
 
     return grades
+
+
+def get_course_roster(course_id, **kwargs):
+
+    # Fetch the grades
+    response = pylifttk.gradescope.api.request(
+        endpoint="courses/{}/memberships.csv".format(course_id)
+    )
+
+    # Parse the CSV format
+    roster = pylifttk.gradescope.util.parse_csv(response.content)
+
+    return roster
+
+
+def invite_many(course_id, role, users, **kwargs):
+    # type: (int, GradescopeRole, _typing.List[_typing.Tuple[str, str]], dict) -> bool
+
+    # Built payload
+    payload = _collections.OrderedDict()
+    counter = 0
+    for (email, name) in users:
+        payload["students[{}][name]".format(counter)] = name
+        payload["students[{}][email]".format(counter)] = email
+        counter += 1
+    payload["role"] = role
+
+    # Fetch the grades
+    response = pylifttk.gradescope.api.request(
+        endpoint="courses/{}/memberships/many".format(course_id),
+        data=payload,
+    )
+
+    return response.status_code == 200
 
 
 def get_courses(by_name=False):

@@ -97,7 +97,7 @@ def get_auth_cookies(username=None, password=None, **kwargs):
 
 
 def request(endpoint=None, url=None, data=None, json=None, **kwargs):
-    # type: (_typing.Optional[str], _typing.Optional[str], _typing.Optional[str], _typing.Optional[dict], dict) -> _requests.Response
+    # type: (_typing.Optional[str], _typing.Optional[str], _typing.Optional[_typing.Union[str, dict]], _typing.Optional[dict], dict) -> _requests.Response
     """
     Make a request directly to the Ed platform's API.
     """
