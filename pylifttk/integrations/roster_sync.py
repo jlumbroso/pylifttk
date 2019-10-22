@@ -11,24 +11,24 @@ def csstaff_to_ed(src_names, dest_course_name, dest_course_term):
     for src_name in src_names:
         students.update(pylifttk.csstaff.course_enrollment(course_name=src_name, as_dict=True))
 
-    # {'coursename': 'COS126_F2019',
+    # {'coursename': 'COS126_F2018',
     #  'lecture': 'L01',
     #  'precept': 'P08',
-    #  'netid': 'aa26',
-    #  'first': 'Abhinav',
+    #  'netid': 'aa99',
+    #  'first': 'Anita',
     #  'last': 'Agarwal',
-    #  'puid': '920227006',
+    #  'puid': '920299006',
     #  'acareer': 'UGRD',
     #  'year': '2023'}
 
-    # {'coursename': 'COS231_F2019',
+    # {'coursename': 'COS231_F2018',
     #  'lecture': 'L01',
     #  'lab': 'B02',
     #  'class': 'C01',
-    #  'netid': 'bhoomika',
-    #  'first': 'Bhoomika',
-    #  'last': 'Chowdhary',
-    #  'puid': '920227604',
+    #  'netid': 'bagoran',
+    #  'first': 'Bhuta',
+    #  'last': 'Goran',
+    #  'puid': '920177604',
     #  'acareer': 'UGRD',
     #  'year': '2023'}
 
@@ -62,24 +62,24 @@ def csstaff_to_codepost(src_names, dest_course_name, dest_course_term):
     for src_name in src_names:
         students.update(pylifttk.csstaff.course_enrollment(course_name=src_name, as_dict=True))
 
-    # {'coursename': 'COS126_F2019',
+    # {'coursename': 'COS126_F2018',
     #  'lecture': 'L01',
     #  'precept': 'P08',
-    #  'netid': 'aa26',
-    #  'first': 'Abhinav',
+    #  'netid': 'aa99',
+    #  'first': 'Anita',
     #  'last': 'Agarwal',
-    #  'puid': '920227006',
+    #  'puid': '920299006',
     #  'acareer': 'UGRD',
     #  'year': '2023'}
 
-    # {'coursename': 'COS231_F2019',
+    # {'coursename': 'COS231_F2018',
     #  'lecture': 'L01',
     #  'lab': 'B02',
     #  'class': 'C01',
-    #  'netid': 'bhoomika',
-    #  'first': 'Bhoomika',
-    #  'last': 'Chowdhary',
-    #  'puid': '920227604',
+    #  'netid': 'bagoran',
+    #  'first': 'Bhuta',
+    #  'last': 'Goran',
+    #  'puid': '920177604',
     #  'acareer': 'UGRD',
     #  'year': '2023'}
 
