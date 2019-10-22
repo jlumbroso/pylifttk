@@ -10,6 +10,40 @@ def get_course_id(course_name, course_period):
             return course.id
 
 
+def invite_many_students(course_id, students, append=True):
+
+    roster = students[:]
+
+    if append:
+        existing_students = _codepost.roster.retrieve(id=course_id).students
+        for student in existing_students:
+            if student not in roster:
+                roster.append(student)
+
+    _codepost.roster.update(
+        id=1,
+        students=roster
+    )
+
+
+def set_course_sections(course_id, section_dict):
+
+    sections_name_to_id = {}
+    for section in _codepost.course.retrieve(id=course_id).sections:
+        sections_name_to_id[section.name] = section.id
+
+    for section_name, roster in section_dict.items():
+        if section_name not in sections_name_to_id:
+            continue
+
+        section_id = sections_name_to_id[section_name]
+
+        _codepost.section.update(
+            id=section_id,
+            students=roster,
+        )
+
+
 def get_course_grades(course_id, only_finalized=True, api_key=None):
     """
     Returns a dictionary mapping every student in the specified course

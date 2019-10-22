@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pylifttk/tigerfile/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/tigerfile/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/tigerfile/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/tigerfile/macros.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/tigerfile/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/integrations/roster_sync.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pylifttk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pylifttk.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/config_default.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/config_default.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/codepost/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/codepost/macros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/ed/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/ed/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/ed/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/ed/macros.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +74,8 @@
       <workItem from="1571368840989" duration="4230000" />
       <workItem from="1571528895565" duration="5011000" />
       <workItem from="1571536613397" duration="11911000" />
+      <workItem from="1571715994912" duration="46000" />
+      <workItem from="1571716085552" duration="440000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -148,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571588249397</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added Tigerfile integration, v0.0.10">
+      <created>1571609135455</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1571609135455</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +184,7 @@
     <MESSAGE value="v0.0.4" />
     <MESSAGE value="v0.0.5, with codepost dependency properly added to setup.py" />
     <MESSAGE value="Internal package imports refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Internal package imports refactor" />
+    <MESSAGE value="Added Tigerfile integration, v0.0.10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Tigerfile integration, v0.0.10" />
   </component>
 </project>

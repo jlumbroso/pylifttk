@@ -4,7 +4,7 @@ import typing as _typing
 import requests as _requests
 
 
-class GradescopeAPIException(Exception):
+class EdAPIException(Exception):
 
     def __init__(self, **kv):
 
@@ -26,7 +26,7 @@ class GradescopeAPIException(Exception):
 
         # Call parent class constructor
 
-        super(GradescopeAPIException, self).__init__(self.message)
+        super(EdAPIException, self).__init__(self.message)
 
 
 def handle_api_error(res):
@@ -58,11 +58,11 @@ def handle_api_error(res):
         pass
 
     if res.status_code == 401 and "json_msg" in data and data["json_msg"]["message"] == "Missing token":
-        raise GradescopeAPIException(
+        raise EdAPIException(
             msg="Authentication token was not generated.",
             **data,
         )
 
-    raise GradescopeAPIException(
+    raise EdAPIException(
         msg="Unknown HTTP error, see source exception headers.",
         **data)
