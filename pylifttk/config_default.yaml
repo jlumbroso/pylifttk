@@ -18,3 +18,7 @@ gradescope:
 
 tigerfile:
   token: ""
+
+labqueue:
+  username: ""
+  password: ""

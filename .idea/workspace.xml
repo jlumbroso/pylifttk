@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pylifttk/labqueue/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/config_default.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/config_default.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +73,8 @@
       <workItem from="1571536613397" duration="11911000" />
       <workItem from="1571715994912" duration="46000" />
       <workItem from="1571716085552" duration="1274000" />
-      <workItem from="1571957518170" duration="270000" />
+      <workItem from="1571957518170" duration="617000" />
+      <workItem from="1572044010546" duration="182000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -165,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571716870785</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="v0.0.11">
+      <created>1571975775136</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1571975775136</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +207,7 @@
     <MESSAGE value="Added Tigerfile integration, v0.0.10" />
     <MESSAGE value="Added macros to codePost and Gradescope integration; added roster_sync integration." />
     <MESSAGE value="Minor comment changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor comment changes." />
+    <MESSAGE value="v0.0.11" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.0.11" />
   </component>
 </project>
