@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pylifttk/labqueue/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/config_default.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/config_default.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/tigerfile/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/tigerfile/macros.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +73,10 @@
       <workItem from="1571715994912" duration="46000" />
       <workItem from="1571716085552" duration="1274000" />
       <workItem from="1571957518170" duration="617000" />
-      <workItem from="1572044010546" duration="182000" />
+      <workItem from="1572044010546" duration="215000" />
+      <workItem from="1572101168290" duration="223000" />
+      <workItem from="1572226723662" duration="3000" />
+      <workItem from="1572233768979" duration="633000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -174,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571975775136</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added stubs for Labqueue integration">
+      <created>1572044277732</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1572044277732</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +217,7 @@
     <MESSAGE value="Added macros to codePost and Gradescope integration; added roster_sync integration." />
     <MESSAGE value="Minor comment changes." />
     <MESSAGE value="v0.0.11" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.0.11" />
+    <MESSAGE value="Added stubs for Labqueue integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added stubs for Labqueue integration" />
   </component>
 </project>

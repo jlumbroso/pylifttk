@@ -201,6 +201,17 @@ def get_submissions(dropbox_id, user_id):
 
 
 def compute_student_lateness(dropbox_id, user_id, assignments_summary=None):
+    # type: (int, int, _typing.Optional[dict]) -> _typing.Dict[int, _datetime.timedelta]
+    """
+    Computes, for a given student, the lateness of their last submission to each
+    assignment in the course.
+
+    :param dropbox_id: The ID of the Dropbox containing the assignments.
+    :param user_id: The student's ID.
+    :param assignments_summary: For caching purposes, this is the output of `get_assignments_summary` for this `dropbox_id`
+    :return: A dictionary mapping each assignment ID to a delay, if the student submitted the corresponding assignment late.
+    """
+
     if assignments_summary is None:
         assignments_summary = get_assignments_summary(dropbox_id)
 
@@ -240,6 +251,16 @@ def compute_student_lateness(dropbox_id, user_id, assignments_summary=None):
 
 
 def compute_dropbox_lateness(course_name, course_term):
+    # type: (str, str) -> _typing.Dict[str, _typing.Dict[int, _datetime.timedelta]]
+    """
+    Computes, for each student, the lateness of their most recent submission for
+    all assignments.
+
+    :param course_name: The name of the course (e.g. COS126).
+    :param course_term: The term of the course (e.g. F2019).
+    :return: A dictionary mapping each student to a dictionary mapping each assignment to a delay.
+    """
+
     dropbox_id = pylifttk.tigerfile.get_dropboxes(
         course_name=course_name,
         course_term=course_term,
