@@ -16,6 +16,7 @@ confuse = "*"
 bs4 = "*"
 codepost = "*"
 enum34 = "*"
+ipykernel = "*"
 
 [requires]
 python_version = "3.8"

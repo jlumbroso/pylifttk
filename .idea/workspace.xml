@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/tigerfile/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/tigerfile/macros.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,6 +35,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -76,7 +79,12 @@
       <workItem from="1572044010546" duration="215000" />
       <workItem from="1572101168290" duration="223000" />
       <workItem from="1572226723662" duration="3000" />
-      <workItem from="1572233768979" duration="633000" />
+      <workItem from="1572233768979" duration="687000" />
+      <workItem from="1572234527153" duration="95000" />
+      <workItem from="1572234939870" duration="1826000" />
+      <workItem from="1572630958035" duration="76000" />
+      <workItem from="1572631056196" duration="3000" />
+      <workItem from="1572631077326" duration="179000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -183,7 +191,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572044277732</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added documentation and typing for Tigerfile macros">
+      <created>1572234483801</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1572234483801</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Changed interpreter">
+      <created>1572235202233</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1572235202233</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +240,8 @@
     <MESSAGE value="Minor comment changes." />
     <MESSAGE value="v0.0.11" />
     <MESSAGE value="Added stubs for Labqueue integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added stubs for Labqueue integration" />
+    <MESSAGE value="Added documentation and typing for Tigerfile macros" />
+    <MESSAGE value="Changed interpreter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed interpreter" />
   </component>
 </project>
