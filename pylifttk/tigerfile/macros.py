@@ -10,8 +10,11 @@ import pylifttk.tigerfile.exceptions
 import pylifttk.tigerfile.util
 
 
-def get_dropboxes(course_name=None, course_term=None, fetch_id=False):
-    # type: () -> dict
+def get_dropboxes(
+        course_name: str = None,
+        course_term: str = None,
+        fetch_id: bool = False
+) -> _typing.Optional[_typing.Union[int, dict]]:
     """
 
     :return:
@@ -282,7 +285,62 @@ def compute_dropbox_lateness(course_name, course_term):
             assignments_summary=assignments_summary
         )
         if record and len(record) > 0:
-            print(netid, record)
             lateness[netid] = record
 
     return lateness
+
+
+GRACE_PERIOD = 2 * 60 * 60  # two hours in seconds
+
+
+def timedelta_to_lateness(dt, by_hours=False):
+    if dt is None or type(dt) is str or type(dt) is int:
+        return dt
+
+    total_seconds = dt.days * 24 * 60 * 60 + dt.seconds
+
+    if total_seconds < GRACE_PERIOD:
+        return 0.0
+
+    total_minutes = total_seconds / 60
+    total_hours = total_minutes / 60
+    total_days = total_hours / 24
+
+    if by_hours:
+        return round(total_hours, 2)
+    else:
+        return round(total_days, 2)
+
+
+def compute_dropbox_lateness_csv_string(course_name, course_term):
+    # type: (str, str) -> str
+    """
+
+    :param course_name:
+    :param course_term:
+    :return:
+    """
+
+    assignments = sorted(filter(
+        lambda rec: "assignment" in rec.get("description", "").lower(),
+        pylifttk.tigerfile.macros.get_assignments(
+            course_name=course_name,
+            course_term=course_term)),
+        key=lambda rec: rec.get("due_date"))
+
+    lateness = pylifttk.tigerfile.macros.compute_dropbox_lateness(
+        course_name=course_name,
+        course_term=course_term)
+
+    headers = ["Username"] + list(map(lambda rec: rec.get("name"), assignments)) + ["Total"]
+    lines = []
+    for (student, record) in lateness.items():
+        line_fields = [student] + list(map(
+            lambda rec: str(timedelta_to_lateness(record.get(rec["id"], ""))), assignments))
+        total = str(timedelta_to_lateness(sum(record.values(), start=_datetime.timedelta(0))))
+        line_fields.append(total)
+        lines.append(line_fields)
+    lines = sorted(lines)
+    csv_string = "\n".join(list(map(lambda f: ",".join(f), ([headers] + lines))))
+
+    return csv_string
