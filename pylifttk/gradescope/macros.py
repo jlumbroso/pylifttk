@@ -1,5 +1,6 @@
 
 import collections as _collections
+import re as _re
 import typing as _typing
 
 import bs4 as _bs4
@@ -8,6 +9,9 @@ import pylifttk.util
 
 import pylifttk.gradescope.api
 import pylifttk.gradescope.util
+
+
+ASSIGNMENT_URL_PATTERN = r"/courses/([0-9]*)/assignments/([0-9]*)$"
 
 
 class GradescopeRole(pylifttk.util.DocEnum):
@@ -77,7 +81,7 @@ def invite_many(course_id, role, users, **kwargs):
 
 def get_courses(by_name=False):
     response = pylifttk.gradescope.api.request(endpoint="account")
-    soup = _bs4.BeautifulSoup(response.content)
+    soup = _bs4.BeautifulSoup(response.content, features="html.parser")
     hrefs = list(filter(lambda s: s, map(
         lambda anchor: anchor.get("href"),
         soup.find_all("a", {"class": "courseBox"})
@@ -92,7 +96,7 @@ def get_courses(by_name=False):
 
 def get_course_name(course_id):
     result = pylifttk.gradescope.api.request(endpoint="courses/{}".format(course_id))
-    soup = _bs4.BeautifulSoup(result.content.decode())
+    soup = _bs4.BeautifulSoup(result.content.decode(), features="html.parser")
     header_element = soup.find("header", {"class": "courseHeader"})
     if header_element:
         course_name = header_element.find("h1").text.replace(" ", "")
@@ -101,3 +105,76 @@ def get_course_name(course_id):
         course_term = course_term.replace("Fall ", "F")
         course_term = course_term.replace("Spring ", "S")
         return {"name": course_name, "term": course_term, "id": course_id}
+
+
+def get_course_id(course_name, course_term):
+    courses = get_courses(by_name=True)
+    for course in courses:
+        if course["name"] == course_name and course["term"] == course_term:
+            return course["id"]
+
+
+def get_course_assignments(course_id):
+    result = pylifttk.gradescope.api.request(endpoint="courses/{}".format(course_id))
+    soup = _bs4.BeautifulSoup(result.content.decode(), features="html.parser")
+
+    assignment_table = soup.find("table", {"class": "table-assignments"})
+    anchors = assignment_table.find_all("a")
+
+    assignments = []
+    for anchor in anchors:
+        url = anchor.get("href")
+        if url is None or url == "":
+            continue
+        match = _re.match(ASSIGNMENT_URL_PATTERN, url)
+        if match is None:
+            continue
+
+        assignments.append({
+            "id": match.group(2),
+            "name": anchor.text
+        })
+
+    return assignments
+
+
+def get_course_grades(course_id, only_graded=True, use_email=True):
+
+    # Dictionary mapping student emails to grades
+    grades = {}
+
+    gradescope_assignments = get_course_assignments(
+        course_id=course_id)
+
+    for assignment in gradescope_assignments:
+        # {'id': '273671', 'name': 'Written Exam 1'}
+        assignment_name = assignment["name"]
+        assignment_grades = get_assignment_grades(
+            course_id=course_id,
+            assignment_id=assignment.get("id"),
+            simplified=True)
+
+        for record in assignment_grades:
+            # {'name': 'Joe Student',
+            #   'sid': 'jl27',
+            #   'email': 'jl27@princeton.edu',
+            #   'score': '17.75',
+            #   'graded': True,
+            #   'view_count': '4',
+            #   'id': '22534979'}
+
+            if only_graded and not record.get("graded", False):
+                continue
+
+            student_id = record["sid"]
+            if use_email:
+                student_id = record["email"]
+            grade = pylifttk.util.robust_float(record.get("score"))
+
+            # Add grade to student
+            grades[student_id] = grades.get(student_id, dict())
+            grades[student_id][assignment_name] = grade
+
+    return grades
+
+

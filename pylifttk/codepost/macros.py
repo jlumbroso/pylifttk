@@ -3,10 +3,10 @@
 import codepost as _codepost
 
 
-def get_course_id(course_name, course_period):
+def get_course_id(course_name, course_term):
     courses = _codepost.course.list_available()
     for course in courses:
-        if course.name == course_name and course.period == course_period:
+        if course.name == course_name and course.period == course_term:
             return course.id
 
 

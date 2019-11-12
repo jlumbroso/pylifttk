@@ -61,6 +61,16 @@ def robust_str(obj, default="N/A"):
     return obj_str
 
 
+def robust_float(obj, default=0.0):
+    # type: (_typing.Any, _typing.Any) -> _typing.Union[float, _typing.Any]
+    obj_float = default
+    try:
+        obj_float = float(obj)
+    except ValueError:
+        pass
+    return obj_float
+
+
 # =============================================================================
 
 
