@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/codepost/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/codepost/macros.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/gradescope/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/gradescope/macros.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +85,7 @@
       <workItem from="1572631077326" duration="226000" />
       <workItem from="1572823221242" duration="614000" />
       <workItem from="1573443780310" duration="1544000" />
-      <workItem from="1573591435670" duration="4155000" />
+      <workItem from="1573591435670" duration="4742000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -222,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573446011777</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Wrote macro to generate lateness CSV file from TigerFile data">
+      <created>1573599573817</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1573599573817</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
