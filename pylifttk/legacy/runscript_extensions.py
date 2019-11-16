@@ -12,7 +12,8 @@ import pylifttk.legacy
 LEGACY_EXTENSION_PATH = "/u/{course}/assignments/*/grading/duetime.extensions"
 
 
-def parse_extension_file(filepath: str) -> dict:
+def parse_extension_file(filepath):
+    # type: (str) -> dict
     """
 
     :param filepath:
@@ -38,7 +39,8 @@ def parse_extension_file(filepath: str) -> dict:
     return local_extensions
 
 
-def parse_extensions(course: str = "cos126") -> _typing.Dict[str, _typing.Dict[str, _datetime.datetime]]:
+def parse_extensions(course="cos126"):
+    # type: (str) -> _typing.Dict[str, _typing.Dict[str, _datetime.datetime]]
     """
 
     :param course:
