@@ -1,10 +1,12 @@
 
 import datetime as _datetime
 import glob as _glob
+import json as _json
 import typing as _typing
 
 import dateutil.parser as _dateutil_parser
 
+import pylifttk
 import pylifttk.legacy
 
 
@@ -39,13 +41,21 @@ def parse_extension_file(filepath):
     return local_extensions
 
 
-def parse_extensions(course="cos126"):
+def parse_extensions(course=None):
     # type: (str) -> _typing.Dict[str, _typing.Dict[str, _datetime.datetime]]
     """
 
     :param course:
     :return:
     """
+
+    if course is None:
+        try:
+            course = pylifttk.config["course"].get(str).lower()
+        except:
+            raise  # FIXME: ?
+        if course is None:
+            return {}
 
     glob_path = LEGACY_EXTENSION_PATH.format(course=course)
     extension_files = _glob.glob(glob_path)
@@ -62,3 +72,22 @@ def parse_extensions(course="cos126"):
             extensions[assignment] = assignment_exts
 
     return extensions
+
+
+def dump_extensions(course=None, filename=None):
+    # type: (str, str) -> bool
+
+    if filename is None:
+        return False
+
+    extensions = parse_extensions(course=course)
+    json_output = _json.dumps(extensions, indent=2, default=str)
+
+    try:
+        with open(filename, "w") as f:
+            f.write(json_output)
+            f.close()
+    except Exception as e:
+        return False
+
+    return True

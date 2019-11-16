@@ -255,7 +255,7 @@ def compute_student_lateness(dropbox_id, user_id, assignments_summary=None):
 
 
 def compute_dropbox_lateness(course_name, course_term):
-    # type: (str, str) -> _typing.Dict[str, _typing.Dict[int, _datetime.timedelta]]
+    # type: (str, str) -> _typing.Optional[_typing.Dict[str, _typing.Dict[int, _datetime.timedelta]]]
     """
     Computes, for each student, the lateness of their most recent submission for
     all assignments.
