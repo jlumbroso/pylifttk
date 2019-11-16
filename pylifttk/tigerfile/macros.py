@@ -262,15 +262,15 @@ def compute_student_lateness(dropbox_id, user_id, assignments_summary=None, exte
 
             a_ext = extensions.get(a_id)
 
-            if type(a_id) is float:
+            if type(a_ext) is float:
                 # extension in relative hours
                 due_date = due_date + _datetime.timedelta(seconds=a_ext * 60.0 * 60.0)
 
-            elif type(a_id) is _datetime.datetime:
+            elif type(a_ext) is _datetime.datetime:
                 # extension is absolute datetime
                 due_date = a_ext
 
-        delay = file_ts - a_info["due"]
+        delay = student_ts - due_date
 
         if delay > _datetime.timedelta(seconds=0):
             student_lateness[a_id] = delay
