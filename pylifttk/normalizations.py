@@ -12,7 +12,10 @@ class PyLIFTtkNormalizationType(pylifttk.util.DocEnum):
     tigerfile = "tigerfile", "Tigerfile assignment names"
 
 
-normalizations = pylifttk.config["normalizations"].get()
+try:
+    normalizations = pylifttk.config["normalizations"].get()
+except: # confuse.NotFoundError
+    normalizations = {}
 
 
 def _find_normalization_path(source, destination):
