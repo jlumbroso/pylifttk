@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pylifttk/legacy/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pylifttk/legacy/runscript_extensions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +85,7 @@
       <workItem from="1572823221242" duration="614000" />
       <workItem from="1573443780310" duration="1544000" />
       <workItem from="1573591435670" duration="5259000" />
-      <workItem from="1573919961157" duration="580000" />
+      <workItem from="1573919961157" duration="675000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -236,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573660317963</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added support for legacy local extensions through the runscript duetimes.extension files">
+      <created>1573922468207</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1573922468207</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +281,7 @@
     <MESSAGE value="Minor change" />
     <MESSAGE value="Wrote macro to generate lateness CSV file from TigerFile data" />
     <MESSAGE value="v0.0.12" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.0.12" />
+    <MESSAGE value="Added support for legacy local extensions through the runscript duetimes.extension files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added support for legacy local extensions through the runscript duetimes.extension files" />
   </component>
 </project>
