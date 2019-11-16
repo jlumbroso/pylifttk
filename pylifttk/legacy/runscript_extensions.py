@@ -114,7 +114,7 @@ def preprocess_extensions_from_runscript_to_tigerfile(dropbox_id, extensions):
             if type(extended_due_date) is str:
                 parsed_date = _dateutil_parser.parse(extended_due_date)
                 if parsed_date is not None and parsed_date.tzinfo is None:
-                    parsed_date = _dateutil_parser.parse(extended_due_date + LEGACY_TIMEZONE).tzinfo
+                    parsed_date = _dateutil_parser.parse(extended_due_date + LEGACY_TIMEZONE)
 
             students_extensions[student] = students_extensions.get(student, dict())
             students_extensions[student][tigerfile_assignment_id] = parsed_date
