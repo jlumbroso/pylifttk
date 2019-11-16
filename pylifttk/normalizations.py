@@ -7,7 +7,7 @@ import pylifttk
 normalizations = pylifttk.config["normalizations"].get()
 
 
-def _find_normalization_path(src, dst):
+def _find_normalization_path(source, destination):
     # type: (str, str) -> _typing.Optional[_typing.List[str]]
     """
 
@@ -46,16 +46,16 @@ def _find_normalization_path(src, dst):
             if ret_path is not None:
                 return ret_path
 
-    return dfs(start=src, end=dst)
+    return dfs(start=source, end=destination)
 
 
-def normalize(word, src, dst, echo_word=False):
+def normalize(word, source, destination, echo_word=False):
     # type: (str, str, str, bool) -> _typing.Optional[str]
     """
 
     :param word:
-    :param src:
-    :param dst:
+    :param source:
+    :param destination:
     :param echo_word:
     :return:
     """
@@ -65,20 +65,18 @@ def normalize(word, src, dst, echo_word=False):
         for normalization in normalizations:
 
             # Direct lookup
-            if (src == normalization["source"] and
-                    dst == normalization["destination"]):
+            if src == normalization["source"] and dst == normalization["destination"]:
 
                 return normalization["mapping"].get(word)
 
             # Reverse lookup
-            elif (dst == normalization["source"] and
-                  src == normalization["destination"]):
+            elif dst == normalization["source"] and src == normalization["destination"]:
 
                 for key, value in normalization["mapping"].items():
                     if value == word:
                         return key
 
-    normalization_path = _find_normalization_path(src, dst)
+    normalization_path = _find_normalization_path(source, destination)
     if normalization_path is None:
         return
 
