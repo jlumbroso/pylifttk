@@ -2,6 +2,14 @@
 import typing as _typing
 
 import pylifttk
+import pylifttk.util
+
+
+class PyLIFTtkNormalizationType(pylifttk.util.DocEnum):
+
+    codepost = "codepost", "codePost assignment names"
+    runscript = "runscript", "runscript assignment names"
+    tigerfile = "tigerfile", "Tigerfile assignment names"
 
 
 normalizations = pylifttk.config["normalizations"].get()
@@ -50,7 +58,7 @@ def _find_normalization_path(source, destination):
 
 
 def normalize(word, source, destination, echo_word=False):
-    # type: (str, str, str, bool) -> _typing.Optional[str]
+    # type: (str, PyLIFTtkNormalizationType, PyLIFTtkNormalizationType, bool) -> _typing.Optional[str]
     """
 
     :param word:
@@ -76,7 +84,7 @@ def normalize(word, source, destination, echo_word=False):
                     if value == word:
                         return key
 
-    normalization_path = _find_normalization_path(source, destination)
+    normalization_path = _find_normalization_path(source.value, destination.value)
     if normalization_path is None:
         return
 

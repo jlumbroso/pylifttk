@@ -10,6 +10,13 @@ import pylifttk.tigerfile.exceptions
 import pylifttk.tigerfile.util
 
 
+#
+ExtensionType = _typing.Union[float, _datetime.datetime]
+
+# This type maps a student ID to a relative number of hours (past due date), or an absolute date
+ExtensionsType = _typing.Optional[_typing.Dict[str, ExtensionType]]
+
+
 def get_dropboxes(
         course_name: str = None,
         course_term: str = None,
@@ -204,16 +211,15 @@ def get_submissions(dropbox_id, user_id):
     return result.get("entities", None)
 
 
-def compute_student_lateness(dropbox_id, user_id, assignments_summary=None):
-    # type: (int, int, _typing.Optional[dict]) -> _typing.Dict[int, _datetime.timedelta]
+def compute_student_lateness(dropbox_id, user_id, assignments_summary=None, extensions=None):
+    # type: (int, int, _typing.Optional[dict], _typing.Optional[ExtensionType]) ->_typing.Dict[int, _datetime.timedelta]
     """
-    Computes, for a given student, the lateness of their last submission to each
-    assignment in the course.
 
-    :param dropbox_id: The ID of the Dropbox containing the assignments.
-    :param user_id: The student's ID.
-    :param assignments_summary: For caching purposes, this is the output of `get_assignments_summary` for this `dropbox_id`
-    :return: A dictionary mapping each assignment ID to a delay, if the student submitted the corresponding assignment late.
+    :param dropbox_id:
+    :param user_id:
+    :param assignments_summary:
+    :param extensions:
+    :return:
     """
 
     if assignments_summary is None:
@@ -225,6 +231,9 @@ def compute_student_lateness(dropbox_id, user_id, assignments_summary=None):
     )
 
     student_lateness = {}
+
+    if extensions is None:
+        extensions = dict()
 
     for sub in submissions:
         a_id = sub["assignment"]["id"]
@@ -246,6 +255,21 @@ def compute_student_lateness(dropbox_id, user_id, assignments_summary=None):
             if student_ts is None or student_ts < file_ts:
                 student_ts = file_ts
 
+        due_date = a_info["due"]
+
+        # Check for an extension
+        if a_id in extensions:
+
+            a_ext = extensions.get(a_id)
+
+            if type(a_id) is float:
+                # extension in relative hours
+                due_date = due_date + _datetime.timedelta(seconds=a_ext * 60.0 * 60.0)
+
+            elif type(a_id) is _datetime.datetime:
+                # extension is absolute datetime
+                due_date = a_ext
+
         delay = file_ts - a_info["due"]
 
         if delay > _datetime.timedelta(seconds=0):
@@ -254,15 +278,14 @@ def compute_student_lateness(dropbox_id, user_id, assignments_summary=None):
     return student_lateness
 
 
-def compute_dropbox_lateness(course_name, course_term):
-    # type: (str, str) -> _typing.Optional[_typing.Dict[str, _typing.Dict[int, _datetime.timedelta]]]
+def compute_dropbox_lateness(course_name, course_term, extensions=None):
+    # type: (str, str, ExtensionsType) -> _typing.Optional[_typing.Dict[str, _typing.Dict[int, _datetime.timedelta]]]
     """
-    Computes, for each student, the lateness of their most recent submission for
-    all assignments.
 
-    :param course_name: The name of the course (e.g. COS126).
-    :param course_term: The term of the course (e.g. F2019).
-    :return: A dictionary mapping each student to a dictionary mapping each assignment to a delay.
+    :param course_name:
+    :param course_term:
+    :param extensions:
+    :return:
     """
 
     dropbox_id = pylifttk.tigerfile.get_dropboxes(
@@ -278,11 +301,16 @@ def compute_dropbox_lateness(course_name, course_term):
     assignments_summary = get_assignments_summary(dropbox_id=dropbox_id)
     lateness = {}
 
+    if extensions is None:
+        extensions = dict()
+
     for (user_id, netid) in students:
+        student_extensions = extensions.get(netid, dict())
         record = compute_student_lateness(
             dropbox_id=dropbox_id,
             user_id=user_id,
-            assignments_summary=assignments_summary
+            assignments_summary=assignments_summary,
+            extensions=student_extensions,
         )
         if record and len(record) > 0:
             lateness[netid] = record

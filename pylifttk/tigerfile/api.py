@@ -14,7 +14,7 @@ API_BASE_URL = "https://tigerfile.cs.princeton.edu/api/"
 
 
 def request(endpoint=None, url=None, token=None):
-    # type: (_typing.Optional[str], _typing.Optional[str]) -> _typing.DefaultDict
+    # type: (_typing.Optional[str], _typing.Optional[str], _typing.Optional[str]) -> _typing.DefaultDict
     """
     Make a request directly to the Princeton CSStaff's Course API.
     """
