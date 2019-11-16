@@ -54,6 +54,22 @@ class PyLIFTtkConfigurationException(Exception):
 config = PyLIFTtkConfiguration('pylifttk', __name__)
 
 
+def get_course_name():
+    try:
+        course = config["course"].get(str).lower()
+        return course
+    except:
+        pass
+
+
+def get_course_term():
+    try:
+        course = config["term"].get(str).lower()
+        return course
+    except:
+        pass
+
+
 def get_local_config(section, template):
 
     try:
