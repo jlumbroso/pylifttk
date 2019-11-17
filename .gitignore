@@ -1,6 +1,7 @@
 
 # Local sandbox
 [Ss]andbox*.ipynb
+*.json
 
 # Local configuration file
 config.yaml

@@ -3,6 +3,7 @@ import datetime as _datetime
 import glob as _glob
 import json as _json
 import typing as _typing
+import warnings as _warnings
 
 import dateutil.parser as _dateutil_parser
 
@@ -43,7 +44,7 @@ def parse_local_extension_file(filepath):
 
         parsed_date = _dateutil_parser.parse(extended_due_date)
         if parsed_date is not None and parsed_date.tzinfo is None:
-            parsed_date = _dateutil_parser.parse(extended_due_date + LEGACY_TIMEZONE).tzinfo
+            parsed_date = _dateutil_parser.parse(extended_due_date + LEGACY_TIMEZONE)
 
         local_extensions[student] = parsed_date
 
@@ -63,6 +64,14 @@ def parse_local_extensions(course_name=None):
 
     glob_path = LEGACY_EXTENSION_PATH.format(course=course_name)
     extension_files = _glob.glob(glob_path)
+
+    if len(extension_files) == 0:
+        _warnings.warn(
+            "It does not appear the extension parsing functionality is being run "
+            "from a local course shell account. You should not expect a useful "
+            "result.",
+            stacklevel=2,
+        )
 
     glob_path_pieces = glob_path.split("/")
     glob_path_index = glob_path_pieces.index("*")
@@ -125,8 +134,8 @@ def preprocess_extensions_from_runscript_to_tigerfile(dropbox_id, extensions):
 # =======================================================================
 
 
-def dump_local_extensions(course_name=None, course_term=None, filename=None):
-    # type: (str, str, str) -> bool
+def dump_local_extensions(course_name=None, course_term=None, filename=None, use_tigerfile_ids=True):
+    # type: (str, str, str, bool) -> bool
 
     if course_name is None:
         course_name = pylifttk.get_course_name()
@@ -137,27 +146,126 @@ def dump_local_extensions(course_name=None, course_term=None, filename=None):
     if filename is None:
         return False
 
-    dropbox_id = pylifttk.tigerfile.get_dropboxes(
-        course_name=course_name,
-        course_term=course_term,
-        fetch_id=True,
-    )
-
     extensions = parse_local_extensions()
 
-    processed_extensions = preprocess_extensions_from_runscript_to_tigerfile(
-        dropbox_id=dropbox_id,
-        extensions=extensions,
-    )
+    if use_tigerfile_ids:
 
-    json_output = _json.dumps(processed_extensions, indent=2, default=str)
+        dropbox_id = pylifttk.tigerfile.get_dropboxes(
+            course_name=course_name,
+            course_term=course_term,
+            fetch_id=True,
+        )
+
+        processed_extensions = preprocess_extensions_from_runscript_to_tigerfile(
+            dropbox_id=dropbox_id,
+            extensions=extensions,
+        )
+
+        json_object = {
+            "course": course_name,
+            "term": course_term,
+            "format": "tigerfile",
+            "tigerfile_dropbox_id": dropbox_id,
+            "extensions": processed_extensions,
+        }
+
+        json_output = _json.dumps(processed_extensions, indent=2, default=str)
+
+    else:
+
+        json_object = {
+            "course": course_name,
+            "format": "runscript",
+            "extensions": extensions,
+        }
+
+        if course_term is not None:
+            json_object["term"] = course_term
+
+        json_output = _json.dumps(json_object, indent=2, default=str)
 
     try:
         with open(filename, "w") as f:
             f.write(json_output)
             f.close()
+
     except Exception as e:
         return False
 
     return True
+
+
+def load_local_extensions(filename, use_tigerfile_ids=True):
+    # type: (str, bool) -> dict
+    """
+
+    :param filename:
+    :param use_tigerfile_ids:
+    :return:
+    """
+
+    raw_json_object = _json.loads(open(filename).read())
+
+    # parse metadata
+    json_uses_tigerfile = (
+        raw_json_object.get("format") == "tigerfile" and
+        raw_json_object.get("tigerfile_dropbox_id") is not None
+    )
+    raw_extensions = raw_json_object.get("extensions", dict())
+
+    extensions = {}
+
+    if use_tigerfile_ids:
+        # {
+        #     "rahulj": {
+        #         "239": "2019-10-03 23:59:00-04:00",
+        #         "240": "2019-10-10 23:59:00-04:00",
+        #         "238": "2019-09-26 23:59:00-04:00"
+        #     },
+        #     "lp4": {
+        #         ...
+        #     },
+        #     ...
+        # }
+
+        if not json_uses_tigerfile:
+            _warnings.warn(
+                "Loading a tigerfile formatted extension file which does not seem to "
+                "have the correct format.",
+                stacklevel=2,
+            )
+
+        for student, student_extensions in raw_extensions.items():
+            parsed_extensions = dict()
+            for (assignment_id, date) in student_extensions.items():
+                parsed_extensions[int(assignment_id)] = _dateutil_parser.parse(date)
+            extensions[student] = parsed_extensions
+
+    else:
+        # {
+        #     "loops": {
+        #         "rahulj": "2019-10-03 23:59:00-04:00",
+        #         "lp4": "2019-09-24 23:59:00-04:00",
+        #         "eshen": "2020-01-01 23:59:00-04:00"
+        #     },
+        #     "nbody": {
+        #         ...
+        #     }
+        #     ...
+        # }
+
+        if json_uses_tigerfile:
+            _warnings.warn(
+                "Loading a runscript formatted extension file which does not seem to "
+                "have the correct format.",
+                stacklevel=2,
+            )
+
+        for assignment_name, assignment_extensions in raw_extensions.items():
+            parsed_extensions = dict()
+            for (student_id, date) in assignment_extensions.items():
+                parsed_extensions[student_id] = _dateutil_parser.parse(date)
+            extensions[assignment_name] = parsed_extensions
+
+    return extensions
 

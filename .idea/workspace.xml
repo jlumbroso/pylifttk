@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
+    <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="Fixed minor bug in extension calculation, v.0.0.16">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extensions.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/legacy/runscript_extensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/legacy/runscript_extensions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/normalizations.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/normalizations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +88,7 @@
       <workItem from="1572823221242" duration="614000" />
       <workItem from="1573443780310" duration="1544000" />
       <workItem from="1573591435670" duration="5259000" />
-      <workItem from="1573919961157" duration="10277000" />
+      <workItem from="1573919961157" duration="12814000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -286,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573940148488</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Fixed minor bug in extension calculation, v.0.0.16">
+      <created>1573940472231</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1573940472231</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +313,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added configuration file" />
     <MESSAGE value="Added raw request method for CSstaff's Course API" />
     <MESSAGE value="Added code to interact with the Ed platform" />
     <MESSAGE value="Fix for Python 2.x compatibility" />
@@ -331,6 +337,7 @@
     <MESSAGE value="Fixed variable scope bug with normalization logic" />
     <MESSAGE value="Added support for extensions in Tigerfile lateness calculations" />
     <MESSAGE value="Lateness calculations integrated in Tigerfile, v.0.0.15" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lateness calculations integrated in Tigerfile, v.0.0.15" />
+    <MESSAGE value="Fixed minor bug in extension calculation, v.0.0.16" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed minor bug in extension calculation, v.0.0.16" />
   </component>
 </project>
