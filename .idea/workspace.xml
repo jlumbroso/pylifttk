@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="Fixed minor bug in extension calculation, v.0.0.16">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/legacy/runscript_extensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/legacy/runscript_extensions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +86,7 @@
       <workItem from="1572823221242" duration="614000" />
       <workItem from="1573443780310" duration="1544000" />
       <workItem from="1573591435670" duration="5259000" />
-      <workItem from="1573919961157" duration="12814000" />
+      <workItem from="1573919961157" duration="13383000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -293,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573940472231</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Fixes in the extension code">
+      <created>1574006696652</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1574006696652</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +318,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added raw request method for CSstaff's Course API" />
     <MESSAGE value="Added code to interact with the Ed platform" />
     <MESSAGE value="Fix for Python 2.x compatibility" />
     <MESSAGE value="Other fix for Python 2.x compatibility" />
@@ -338,6 +342,7 @@
     <MESSAGE value="Added support for extensions in Tigerfile lateness calculations" />
     <MESSAGE value="Lateness calculations integrated in Tigerfile, v.0.0.15" />
     <MESSAGE value="Fixed minor bug in extension calculation, v.0.0.16" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed minor bug in extension calculation, v.0.0.16" />
+    <MESSAGE value="Fixes in the extension code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes in the extension code" />
   </component>
 </project>
