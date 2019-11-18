@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/legacy/runscript_extensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/legacy/runscript_extensions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/tigerfile/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/tigerfile/macros.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,7 +89,7 @@
       <workItem from="1572823221242" duration="614000" />
       <workItem from="1573443780310" duration="1544000" />
       <workItem from="1573591435670" duration="5259000" />
-      <workItem from="1573919961157" duration="13383000" />
+      <workItem from="1573919961157" duration="16995000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -298,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574006696652</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="v0.0.17">
+      <created>1574025229877</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1574025229878</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +328,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added code to interact with the Ed platform" />
     <MESSAGE value="Fix for Python 2.x compatibility" />
     <MESSAGE value="Other fix for Python 2.x compatibility" />
     <MESSAGE value="Added codePost and Gradescope integration" />
@@ -343,6 +352,7 @@
     <MESSAGE value="Lateness calculations integrated in Tigerfile, v.0.0.15" />
     <MESSAGE value="Fixed minor bug in extension calculation, v.0.0.16" />
     <MESSAGE value="Fixes in the extension code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes in the extension code" />
+    <MESSAGE value="v0.0.17" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.0.17" />
   </component>
 </project>

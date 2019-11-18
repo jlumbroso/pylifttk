@@ -2,6 +2,7 @@
 import datetime as _datetime
 import glob as _glob
 import json as _json
+import os as _os
 import typing as _typing
 import warnings as _warnings
 
@@ -55,7 +56,7 @@ def parse_local_extensions(course_name=None):
     # type: (str) -> _typing.Dict[str, _typing.Dict[str, _datetime.datetime]]
     """
 
-    :param course:
+    :param course_name:
     :return:
     """
 
@@ -146,6 +147,8 @@ def dump_local_extensions(course_name=None, course_term=None, filename=None, use
     if filename is None:
         return False
 
+    filename = _os.path.expanduser(filename)
+
     extensions = parse_local_extensions()
 
     if use_tigerfile_ids:
@@ -162,19 +165,19 @@ def dump_local_extensions(course_name=None, course_term=None, filename=None, use
         )
 
         json_object = {
-            "course": course_name,
-            "term": course_term,
+            "course": course_name.upper(),
+            "term": course_term.upper(),
             "format": "tigerfile",
             "tigerfile_dropbox_id": dropbox_id,
             "extensions": processed_extensions,
         }
 
-        json_output = _json.dumps(processed_extensions, indent=2, default=str)
+        json_output = _json.dumps(json_object, indent=2, default=str)
 
     else:
 
         json_object = {
-            "course": course_name,
+            "course": course_name.lower(),
             "format": "runscript",
             "extensions": extensions,
         }
@@ -203,6 +206,11 @@ def load_local_extensions(filename, use_tigerfile_ids=True):
     :param use_tigerfile_ids:
     :return:
     """
+
+    if filename is None:
+        return {}
+
+    filename = _os.path.expanduser(filename)
 
     raw_json_object = _json.loads(open(filename).read())
 

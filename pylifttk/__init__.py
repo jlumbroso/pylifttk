@@ -24,6 +24,7 @@ from pylifttk.version import __version__
 import os as _os
 import confuse as _confuse
 
+APPNAME = "pylifttk"
 
 class PyLIFTtkConfiguration(_confuse.LazyConfig):
 
@@ -33,7 +34,7 @@ class PyLIFTtkConfiguration(_confuse.LazyConfig):
         if _os.path.exists(local_config):
             return _os.getcwd()
 
-        return super(PyLIFTtkConfiguration, self).__init__()
+        return super(PyLIFTtkConfiguration, self).config_dir()
 
 
 class PyLIFTtkConfigurationException(Exception):
@@ -51,7 +52,7 @@ class PyLIFTtkConfigurationException(Exception):
         super(PyLIFTtkConfigurationException, self).__init__(msg)
 
 
-config = PyLIFTtkConfiguration('pylifttk', __name__)
+config = PyLIFTtkConfiguration(APPNAME, __name__)
 
 
 def get_course_name():

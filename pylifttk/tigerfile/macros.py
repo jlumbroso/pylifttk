@@ -340,12 +340,14 @@ def timedelta_to_lateness(dt, by_hours=False):
         return round(total_days, 2)
 
 
-def compute_dropbox_lateness_csv_string(course_name, course_term):
-    # type: (str, str) -> str
+def compute_dropbox_lateness_csv_string(course_name, course_term, by_hours=False, extensions=None):
+    # type: (str, str, bool, ExtensionsType) -> str
     """
 
     :param course_name:
     :param course_term:
+    :param by_hours:
+    :param extensions:
     :return:
     """
 
@@ -358,14 +360,15 @@ def compute_dropbox_lateness_csv_string(course_name, course_term):
 
     lateness = pylifttk.tigerfile.macros.compute_dropbox_lateness(
         course_name=course_name,
-        course_term=course_term)
+        course_term=course_term,
+        extensions=extensions)
 
-    headers = ["Username"] + list(map(lambda rec: rec.get("name"), assignments)) + ["Total"]
+    headers = ['"Username"'] + list(map(lambda rec: '"{}"'.format(rec.get("name")), assignments)) + ['"Total"']
     lines = []
     for (student, record) in lateness.items():
-        line_fields = [student] + list(map(
-            lambda rec: str(timedelta_to_lateness(record.get(rec["id"], ""))), assignments))
-        total = str(timedelta_to_lateness(sum(record.values(), start=_datetime.timedelta(0))))
+        line_fields = ['"{}"'.format(student)] + list(map(
+            lambda rec: str(timedelta_to_lateness(record.get(rec["id"], ""), by_hours=by_hours)), assignments))
+        total = str(timedelta_to_lateness(sum(record.values(), start=_datetime.timedelta(0)), by_hours=by_hours))
         line_fields.append(total)
         lines.append(line_fields)
     lines = sorted(lines)
