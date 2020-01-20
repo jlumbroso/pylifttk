@@ -179,6 +179,41 @@ def get_roles(dropbox_id):
     result = pylifttk.tigerfile.api.request("dropboxes/{}/roles".format(dropbox_id))
     return result.get("entities", None)
 
+def get_memberships(assignment_id, simplified=False):
+    # type: (int) -> dict
+    """
+
+    :return:
+    """
+    result = pylifttk.tigerfile.api.request("assignments/{}/memberships".format(assignment_id))
+    entities = result.get("entities", None)
+
+    if entities is not None and simplified:
+        # {
+        #     "id": 22684,
+        #     "user": {
+        #         "id": 21443,
+        #         "username": "bragan",
+        #         "first_name": "Baileys",
+        #         "last_name": "Ragan",
+        #         "_links": {
+        #             "self": {
+        #                 "href": "\/users\/21443"
+        #             }
+        #         }
+        #     },
+        #     "submission": {
+        #         "id": "867fc467e560aa92da36c4b73477431d"
+        #     },
+        #     "confirmed": true,
+        #     "notified": true
+        # },
+        entities = {
+            row.get("user", dict()).get("username") : row.get("submission", dict()).get("id")
+            for row in entities
+        }
+
+    return entities
 
 def get_students(dropbox_id):
     students = []

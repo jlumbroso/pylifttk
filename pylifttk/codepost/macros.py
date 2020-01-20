@@ -121,3 +121,57 @@ def get_course_grades(course_id, only_finalized=True, api_key=None):
     # of the course
 
     return grades
+
+
+def get_ungraded_students(assignment_id, course_id=None, students=None):
+    """
+    Returns a dictionary containing the students whose submissions are either
+    unclaimed, unfinalized or not uploaded.
+
+    :param assignment_id:
+    :param course_id:
+    :param students:
+    :return:
+    """
+    if students is None:
+        students = _codepost.roster.retrieve(id=course_id).students
+    submissions = _codepost.assignment.retrieve(id=assignment_id).list_submissions()
+
+    count_total = 0
+    count_finalized = 0
+    count_not_finalized = 0
+    students_missing = {student: True for student in students}
+    students_not_claimed = set()
+    students_not_finalized = set()
+
+    for submission in submissions:
+        count_total += 1
+
+        for s in submission.students:
+            students_missing[s] = False
+
+        if submission.isFinalized:
+            count_finalized += 1
+        else:
+            count_not_finalized += 1
+            if submission.grader is None:
+                students_not_claimed = students_not_claimed.union(
+                    set(submission.students))
+            else:
+                students_not_finalized = students_not_finalized.union(
+                    set(submission.students))
+
+    students_not_claimed = list(students_not_claimed.intersection(set(students)))
+    students_not_finalized = list(students_not_finalized.intersection(set(students)))
+    students_missing = [
+        student
+        for student, is_missing in students_missing.items()
+        if is_missing
+    ]
+
+    # FIXME: Not hard-code these keywords
+    return {
+        "not-claimed": students_not_claimed,
+        "not-finalized": students_not_finalized,
+        "not-uploaded": students_missing,
+    }

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pylifttk/integrations/ungraded.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/codepost/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/codepost/macros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/tigerfile/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/tigerfile/macros.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +89,10 @@
       <workItem from="1573443780310" duration="1544000" />
       <workItem from="1573591435670" duration="5259000" />
       <workItem from="1573919961157" duration="17942000" />
-      <workItem from="1574461486318" duration="333000" />
+      <workItem from="1574461486318" duration="822000" />
+      <workItem from="1574805965723" duration="680000" />
+      <workItem from="1576766616744" duration="7000" />
+      <workItem from="1579475010863" duration="4086000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -313,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574046210573</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="v0.0.19">
+      <created>1574464159965</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1574464159965</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +345,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Other fix for Python 2.x compatibility" />
     <MESSAGE value="Added codePost and Gradescope integration" />
     <MESSAGE value="v0.0.4" />
     <MESSAGE value="v0.0.5, with codepost dependency properly added to setup.py" />
@@ -358,6 +369,7 @@
     <MESSAGE value="Fixes in the extension code" />
     <MESSAGE value="v0.0.17" />
     <MESSAGE value="Extensions handling in CSV export of lateness, v0.0.18" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extensions handling in CSV export of lateness, v0.0.18" />
+    <MESSAGE value="v0.0.19" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.0.19" />
   </component>
 </project>
