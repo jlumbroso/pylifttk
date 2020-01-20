@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/integrations/ungraded.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/integrations/ungraded.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/gradescope/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/gradescope/macros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +91,7 @@
       <workItem from="1574461486318" duration="822000" />
       <workItem from="1574805965723" duration="680000" />
       <workItem from="1576766616744" duration="7000" />
-      <workItem from="1579475010863" duration="5010000" />
+      <workItem from="1579475010863" duration="6141000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -330,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579490559322</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Fix in ungraded script generation for reverse name changes.">
+      <created>1579497226553</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1579497226553</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +358,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.0.4" />
     <MESSAGE value="v0.0.5, with codepost dependency properly added to setup.py" />
     <MESSAGE value="Internal package imports refactor" />
     <MESSAGE value="Added Tigerfile integration, v0.0.10" />
@@ -375,6 +382,7 @@
     <MESSAGE value="Extensions handling in CSV export of lateness, v0.0.18" />
     <MESSAGE value="v0.0.19" />
     <MESSAGE value="Integration code to detect and process ungraded submissions from Tigerfile to codePost." />
-    <option name="LAST_COMMIT_MESSAGE" value="Integration code to detect and process ungraded submissions from Tigerfile to codePost." />
+    <MESSAGE value="Fix in ungraded script generation for reverse name changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix in ungraded script generation for reverse name changes." />
   </component>
 </project>
