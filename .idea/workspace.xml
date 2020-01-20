@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pylifttk/integrations/ungraded.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/codepost/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/codepost/macros.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/tigerfile/macros.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/tigerfile/macros.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/integrations/ungraded.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/integrations/ungraded.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +90,7 @@
       <workItem from="1574461486318" duration="822000" />
       <workItem from="1574805965723" duration="680000" />
       <workItem from="1576766616744" duration="7000" />
-      <workItem from="1579475010863" duration="4086000" />
+      <workItem from="1579475010863" duration="5010000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -325,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574464159965</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Integration code to detect and process ungraded submissions from Tigerfile to codePost.">
+      <created>1579490559322</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1579490559322</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +350,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added codePost and Gradescope integration" />
     <MESSAGE value="v0.0.4" />
     <MESSAGE value="v0.0.5, with codepost dependency properly added to setup.py" />
     <MESSAGE value="Internal package imports refactor" />
@@ -370,6 +374,7 @@
     <MESSAGE value="v0.0.17" />
     <MESSAGE value="Extensions handling in CSV export of lateness, v0.0.18" />
     <MESSAGE value="v0.0.19" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.0.19" />
+    <MESSAGE value="Integration code to detect and process ungraded submissions from Tigerfile to codePost." />
+    <option name="LAST_COMMIT_MESSAGE" value="Integration code to detect and process ungraded submissions from Tigerfile to codePost." />
   </component>
 </project>

@@ -126,7 +126,11 @@ def get_ungraded_assignments(course_name, course_term, lookups=None, codepost_co
 def generate_tigerfile_to_codepost_script(course_name, course_term, lookups=None):
     TEMPLATE = "/n/fs/tigerfile/Files/{course_name}_{course_term}/{assignment_name}/submissions/{submission_id}/"
 
-    assignment_ungraded_infos = get_ungraded_assignments(
+    reverse_lookups = dict()
+    if lookups is not None:
+        reverse_lookups = dict(map(lambda pair: (pair[1], pair[0]), lookups.items()))
+
+    assignment_ungraded_infos = pylifttk.integrations.ungraded.get_ungraded_assignments(
         course_name=course_name,
         course_term=course_term,
         lookups=lookups
@@ -153,11 +157,11 @@ def generate_tigerfile_to_codepost_script(course_name, course_term, lookups=None
                 "~/assignments/{assignment_name}/run-script {submissions} | tee runscript-{assignment_name}.log".format(
                     assignment_name=assignment_name.lower(),
                     submissions=" ".join(submission_ids)
-            ))
+                ))
             script.append(
                 "push-to-codePost --verbose -a'{assignment_name}' -s {submissions} | tee codepost-{assignment_name}.log".format(
-                    assignment_name=assignment_name,
+                    assignment_name=reverse_lookups.get(assignment_name, assignment_name),
                     submissions=" ".join(submission_ids),
-            ))
+                ))
     return "\n".join(script)
 
