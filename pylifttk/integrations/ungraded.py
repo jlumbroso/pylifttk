@@ -124,6 +124,7 @@ def get_ungraded_assignments(course_name, course_term, lookups=None, codepost_co
 
 
 def generate_tigerfile_to_codepost_script(course_name, course_term, lookups=None):
+    # generate_tigerfile_to_codepost_script(course_name, course_term, lookups={"TSPP":"TSP"})
     TEMPLATE = "/n/fs/tigerfile/Files/{course_name}_{course_term}/{assignment_name}/submissions/{submission_id}/"
 
     reverse_lookups = dict()
