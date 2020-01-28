@@ -67,35 +67,35 @@ canvas:
 # Course policy constants
 
 policy:
-  - cutoffs:
-      - "A" : 93
-        "A-": 90
-        "B+": 87
-        "B" : 83
-        "B-": 80
-        "C+": 77
-        "C" : 73
-        "C-": 70
-        "D" : 60
-        "F" : 0
+  cutoffs:
+    "A" : 93
+    "A-": 90
+    "B+": 87
+    "B" : 83
+    "B-": 80
+    "C+": 77
+    "C" : 73
+    "C-": 70
+    "D" : 60
+    "F" : 0
 
-  - lateness:
-      - allotted: 4
-        penalty: 0.5
-        grace_minutes: 180
+  lateness:
+    allotted: 4
+    penalty: 0.5
+    grace_minutes: 180
 
-#  - totals:
-#      - Hello: 4.0
-#        Loops: 4.0
-#        NBody: 4.0
-#        Sierpinski: 4.0
-#        Hamming: 4.0
-#        Programming Exam 1: 7.5
-#        Written Exam 1: 17.5
-#        LFSR: 5.0,
-#        Guitar: 5.0,
-#        Markov: 5.0,
-#        TSPP: 5.0,
-#        Programming Exam 2: 7.5
-#        Written Exam 2: 17.5
-#        Atomic: 10.0
+#  totals:
+#    Hello: 4.0
+#    Loops: 4.0
+#    NBody: 4.0
+#    Sierpinski: 4.0
+#    Hamming: 4.0
+#    Programming Exam 1: 7.5
+#    Written Exam 1: 17.5
+#    LFSR: 5.0,
+#    Guitar: 5.0,
+#    Markov: 5.0,
+#    TSPP: 5.0,
+#    Programming Exam 2: 7.5
+#    Written Exam 2: 17.5
+#    Atomic: 10.0

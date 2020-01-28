@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pylifttk/integrations/final_grades.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pylifttk/policy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/config_default.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/config_default.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/integrations/ungraded.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/integrations/ungraded.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,14 +37,14 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pylifttk" />
       <recent name="$PROJECT_DIR$/pylifttk/codepost" />
       <recent name="$PROJECT_DIR$/pylifttk/gradescope" />
       <recent name="$PROJECT_DIR$/pylifttk/ed" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -59,6 +58,35 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ungraded" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pylifttk" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylifttk/integrations" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylifttk/integrations/ungraded.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ungraded" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -92,7 +120,8 @@
       <workItem from="1574461486318" duration="822000" />
       <workItem from="1574805965723" duration="680000" />
       <workItem from="1576766616744" duration="7000" />
-      <workItem from="1579475010863" duration="9881000" />
+      <workItem from="1579475010863" duration="12521000" />
+      <workItem from="1580186009340" duration="1642000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -346,7 +375,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579499905375</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Added code to extract aggregate grades for a course; extended config default format">
+      <created>1580167559413</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1580167559413</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Integrated name normalization in ungraded integration methods">
+      <created>1580171356084</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1580171356084</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,9 +409,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Internal package imports refactor" />
-    <MESSAGE value="Added Tigerfile integration, v0.0.10" />
-    <MESSAGE value="Added macros to codePost and Gradescope integration; added roster_sync integration." />
     <MESSAGE value="Minor comment changes." />
     <MESSAGE value="v0.0.11" />
     <MESSAGE value="Added stubs for Labqueue integration" />
@@ -391,6 +431,12 @@
     <MESSAGE value="Integration code to detect and process ungraded submissions from Tigerfile to codePost." />
     <MESSAGE value="Fix in ungraded script generation for reverse name changes." />
     <MESSAGE value="Fix for Gradescope assignments (only active ones were being listed correctly), v0.0.20." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix for Gradescope assignments (only active ones were being listed correctly), v0.0.20." />
+    <MESSAGE value="Added code to extract aggreggate grades for a course; extended config default format" />
+    <MESSAGE value="Added code to extract aggregate grades for a course; extended config default format" />
+    <MESSAGE value="Integrated name normalization in ungraded integration methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrated name normalization in ungraded integration methods" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pylifttk$ungraded.coverage" NAME="ungraded Coverage Results" MODIFIED="1580171027505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pylifttk/integrations" />
   </component>
 </project>
