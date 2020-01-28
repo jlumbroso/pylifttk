@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pylifttk/policy.py" afterDir="false" />
+    <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="Added module on `policy`">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/config_default.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/config_default.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/policy.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/policy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +120,7 @@
       <workItem from="1574805965723" duration="680000" />
       <workItem from="1576766616744" duration="7000" />
       <workItem from="1579475010863" duration="12521000" />
-      <workItem from="1580186009340" duration="1642000" />
+      <workItem from="1580186009340" duration="4051000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -389,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580171356084</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added module on `policy`">
+      <created>1580189213720</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1580189213721</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +415,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor comment changes." />
     <MESSAGE value="v0.0.11" />
     <MESSAGE value="Added stubs for Labqueue integration" />
     <MESSAGE value="Added documentation and typing for Tigerfile macros" />
@@ -434,7 +439,8 @@
     <MESSAGE value="Added code to extract aggreggate grades for a course; extended config default format" />
     <MESSAGE value="Added code to extract aggregate grades for a course; extended config default format" />
     <MESSAGE value="Integrated name normalization in ungraded integration methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrated name normalization in ungraded integration methods" />
+    <MESSAGE value="Added module on `policy`" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added module on `policy`" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pylifttk$ungraded.coverage" NAME="ungraded Coverage Results" MODIFIED="1580171027505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pylifttk/integrations" />
