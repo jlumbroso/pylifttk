@@ -1,6 +1,7 @@
 
 import collections as _collections
 import copy as _copy
+import numbers as _numbers
 import typing as _typing
 
 import pylifttk
@@ -44,9 +45,9 @@ _cutoff_intervals = sorted([
         (lower_cutoff, letter)
         for (letter, lower_cutoff) in _cutoffs.items()
     ],
-    reverse=False)
+    reverse=True)
 
-# Graded work totals
+# Graded work totals (FIXME: validate they are all floats)
 
 try:
     _totals = _policy.get("totals")
@@ -96,6 +97,13 @@ for weight in _raw_weights:
         "weight": work_weight,
         "content": [ work_name ]
     })
+
+# Lateness policy
+
+try:
+    _lateness = _policy.get("lateness")
+except: # confuse.NotFoundError
+    _lateness = dict()
 
 ###############################################################################
 
@@ -202,3 +210,33 @@ def raw_score_from_grade_record(
         return raw_score
 
 
+def compute_late_penalty(netid, late_data=None):
+    if late_data is None or netid not in late_data:
+        return 0.0
+
+    # Retrieve computed late days
+    student_late_record = late_data.get(netid)
+
+    # Try to determine the total
+    student_late_day_total = 0.0
+
+    # The record could be a dictionary of lateness per assignment
+    if isinstance(student_late_record, _collections.abc.Mapping):
+        student_late_day_total = sum(student_late_record.values())
+
+    # Or it could be the computed total of late days
+    elif isinstance(student_late_record, _numbers.Number):
+        student_late_day_total =  float(student_late_record)
+
+    # Remove allotted days
+    student_late_day_total -= pylifttk.policy._lateness.get("allotted", 0)
+
+    # Lower-bound by 0
+    student_late_day_total = max(student_late_day_total, 0)
+
+    # Compute a penalty
+    student_late_penalty = (
+            student_late_day_total *
+            pylifttk.policy._lateness.get("penalty", 0.0))
+
+    return student_late_penalty

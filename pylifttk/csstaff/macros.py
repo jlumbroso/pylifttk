@@ -13,11 +13,11 @@ ASDICT_STUDENT_KEY = 'netid'
 ASDICT_COURSE_KEY = 'registrar_id'
 
 
-def course(course_name=None, as_dict=False, simple=False):
+def course(course_key=None, as_dict=False, simple=False):
     # type: (_typing.Optional[str], bool, bool) -> _typing.Union[_typing.List, _typing.Dict]
     """
 
-    :param course_name:
+    :param course_key:
     :param as_dict:
     :param simple:
     :return:
@@ -25,8 +25,8 @@ def course(course_name=None, as_dict=False, simple=False):
 
     # Build endpoint
     endpoint = "course/"
-    if course_name and pylifttk.csstaff.util.validate_course_name(course_name):
-        endpoint += course_name
+    if course_key and pylifttk.csstaff.util.validate_course_key(course_key):
+        endpoint += course_key
 
     # Make request
     result = pylifttk.csstaff.api.request(endpoint=endpoint)
@@ -44,10 +44,10 @@ def course(course_name=None, as_dict=False, simple=False):
     return result
 
 
-def course_staff(course_name, category=None, flatten=True):
-    pylifttk.csstaff.util.validate_course_name(course_name)
+def course_staff(course_key, category=None, flatten=True):
+    pylifttk.csstaff.util.validate_course_key(course_key)
 
-    result = course(course_name=course_name)
+    result = course(course_key=course_key)
 
     if "staff" in result:
         staff = result["staff"]
@@ -66,7 +66,7 @@ def course_staff(course_name, category=None, flatten=True):
                 else:
                     raise pylifttk.csstaff.exceptions.CourseAPIException(
                         msg="Category '%s' invalid for course '%s'." %
-                        (course_name, c))
+                        (course_key, c))
 
             # remove duplicates
             people = list(set(people))
@@ -85,16 +85,16 @@ def course_staff(course_name, category=None, flatten=True):
     return []
 
 
-def course_enrollment(course_name, as_dict=False, force_refresh=False):
+def course_enrollment(course_key, as_dict=False, force_refresh=False):
     """
     Retrieves a list of all students enrolled in the specified course.
     Optionally if `as_dict` is set to `True` then retrieves a dictionary,
     using the NetID as the key.
     """
 
-    pylifttk.csstaff.util.validate_course_name(course_name)
+    pylifttk.csstaff.util.validate_course_key(course_key)
 
-    endpoint = "course_enrollment/{}".format(course_name)
+    endpoint = "course_enrollment/{}".format(course_key)
 
     # Make request
     result = pylifttk.csstaff.api.request(endpoint=endpoint)

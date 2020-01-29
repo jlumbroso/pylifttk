@@ -375,6 +375,29 @@ def timedelta_to_lateness(dt, by_hours=False):
         return round(total_days, 2)
 
 
+def compute_dropbox_lateness_totals(course_name, course_term, by_hours=False, extensions=None):
+    # type: (str, str, bool, ExtensionsType) -> _typing.Dict[str, float]
+
+    assignments = sorted(filter(
+        lambda rec: "assignment" in rec.get("description", "").lower(),
+        pylifttk.tigerfile.macros.get_assignments(
+            course_name=course_name,
+            course_term=course_term)),
+        key=lambda rec: rec.get("due_date"))
+
+    lateness = pylifttk.tigerfile.macros.compute_dropbox_lateness(
+        course_name=course_name,
+        course_term=course_term,
+        extensions=extensions)
+
+    lateness_totals = {}
+    for (student, record) in lateness.items():
+        total = timedelta_to_lateness(sum(record.values(), start=_datetime.timedelta(0)), by_hours=by_hours)
+        lateness_totals[student] = total
+
+    return lateness_totals
+
+
 def compute_dropbox_lateness_csv_string(course_name, course_term, by_hours=False, extensions=None):
     # type: (str, str, bool, ExtensionsType) -> str
     """

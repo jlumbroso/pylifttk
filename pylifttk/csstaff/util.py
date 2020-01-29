@@ -17,13 +17,13 @@ config = pylifttk.get_local_config(
     })
 
 
-def validate_course_name(name, silent=False):
+def validate_course_key(course_key, silent=False):
     """
-    Validate the course name with an elementary heuristic (only contains
+    Validate the course course_key with an elementary heuristic (only contains
     alphanumeric characters, dash and underscore).
     """
 
-    for c in name:
+    for c in course_key:
         if c.isalnum() or c in "_-":
             continue
 
@@ -31,7 +31,7 @@ def validate_course_name(name, silent=False):
             return False
         else:
             raise pylifttk.csstaff.exceptions.CourseAPIException(
-                msg="Course name '{}' could be malformed.".format(name)
+                msg="Course key '{}' could be malformed.".format(course_key)
             )
 
     return True
