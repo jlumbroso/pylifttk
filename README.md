@@ -41,3 +41,31 @@ gradescope:
 tigerfile:
   token: "" # token obtained from https://adm.cs.princeton.edu
 ```
+
+## Example
+
+This snippet computes final grades:
+
+```python
+# Miscellaneous late data calculation
+late_data = get_late_data()
+
+student_data = compute_final_grade_data(
+    course_name="COS126",
+    course_term="F2019",
+    ignore_missing_assessment=False,
+    skipped_assessments=None,
+    override_cutoffs={
+        "A+": 100.0,
+        "A" : 92.49,
+        "A-": 89.50,
+        "B+": 87.00,
+        "B" : 82.75,
+        "B-": 80.00,
+        "C+": 77.00,
+        "C" : 73.00,
+        "C-": 69.00,
+        "D" : 55.0
+    },
+    late_data=late_data)
+```
