@@ -47,10 +47,19 @@ tigerfile:
 This snippet computes final grades:
 
 ```python
+import pylifttk.integrations.final_grades as pyltkfg
+
+def get_late_data():
+    # student_id -> float of late days (including alloted)
+    return {
+        "student1": 1.0,
+        "student7": 2.5,    
+    }
+
 # Miscellaneous late data calculation
 late_data = get_late_data()
 
-student_data = compute_final_grade_data(
+student_data = pyltkfg.compute_final_grade_data(
     course_name="COS126",
     course_term="F2019",
     ignore_missing_assessment=False,

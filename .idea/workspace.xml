@@ -120,7 +120,7 @@
       <workItem from="1574805965723" duration="680000" />
       <workItem from="1576766616744" duration="7000" />
       <workItem from="1579475010863" duration="12521000" />
-      <workItem from="1580186009340" duration="9717000" />
+      <workItem from="1580186009340" duration="9957000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -409,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580326410451</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Updated README.md with example">
+      <created>1580506653893</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1580506653894</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +436,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added documentation and typing for Tigerfile macros" />
     <MESSAGE value="Changed interpreter" />
     <MESSAGE value="Minor change" />
     <MESSAGE value="Wrote macro to generate lateness CSV file from TigerFile data" />
@@ -454,7 +460,8 @@
     <MESSAGE value="Added module on `policy`" />
     <MESSAGE value="Added `raw_score_from_grade_record` computation logic" />
     <MESSAGE value="Added full final grade computation logic that can be used to compute COS 126 grades." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added full final grade computation logic that can be used to compute COS 126 grades." />
+    <MESSAGE value="Updated README.md with example" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md with example" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pylifttk$ungraded.coverage" NAME="ungraded Coverage Results" MODIFIED="1580171027505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pylifttk/integrations" />
