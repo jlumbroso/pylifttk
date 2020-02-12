@@ -128,7 +128,7 @@ def trigger_tests(autograder_output=None, autograder_output_filename=None, mappi
         path = "{}/outputs/{}.json".format(prefix, testCase_id)
         with open(path, "w") as file:
             json_data = _json.dump({
-                "id": testCase_id,
+                "id": "{}".format(testCase_id),
                 "passed": passed,
                 "log": "\n".join(log),
             }, file)

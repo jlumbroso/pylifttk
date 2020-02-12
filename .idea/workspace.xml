@@ -126,14 +126,7 @@
       <workItem from="1581250841932" duration="26000" />
       <workItem from="1581250883278" duration="127000" />
       <workItem from="1581251023933" duration="451000" />
-      <workItem from="1581521104951" duration="4370000" />
-    </task>
-    <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
-      <created>1571370875168</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1571370875169</updated>
+      <workItem from="1581521104951" duration="4497000" />
     </task>
     <task id="LOCAL-00002" summary="Added configuration file">
       <created>1571372607024</created>
@@ -471,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581532966580</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Fixed &quot;log&quot; key output bug v0.0.28">
+      <created>1581534061655</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1581534061684</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +491,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed variable scope bug with normalization logic" />
     <MESSAGE value="Added support for extensions in Tigerfile lateness calculations" />
     <MESSAGE value="Lateness calculations integrated in Tigerfile, v.0.0.15" />
     <MESSAGE value="Fixed minor bug in extension calculation, v.0.0.16" />
@@ -516,21 +515,22 @@
     <MESSAGE value="Fixed internal codePost-related bug, v0.0.24" />
     <MESSAGE value="v0.0.26" />
     <MESSAGE value="Trigger to prefix directory v0.0.27" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trigger to prefix directory v0.0.27" />
+    <MESSAGE value="Fixed &quot;log&quot; key output bug v0.0.28" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed &quot;log&quot; key output bug v0.0.28" />
   </component>
   <component name="WindowStateProjectService">
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1581251006850">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581251006850" />
-    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1581532966295">
+    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1581534061478">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581532966295" />
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1581532968126">
+    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581534061478" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1581534064213">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581532968126" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581534064213" />
     <state x="494" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1581251022935">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
