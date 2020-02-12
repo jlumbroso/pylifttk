@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pylifttk/integrations/grading_tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylifttk/runscript/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/runscript/parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +127,7 @@
       <workItem from="1581250841932" duration="26000" />
       <workItem from="1581250883278" duration="127000" />
       <workItem from="1581251023933" duration="451000" />
-      <workItem from="1581521104951" duration="509000" />
+      <workItem from="1581521104951" duration="2174000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -436,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580959826324</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="v0.0.22">
+      <created>1581524117504</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1581524117504</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Wrote macro to generate lateness CSV file from TigerFile data" />
     <MESSAGE value="v0.0.12" />
     <MESSAGE value="Added support for legacy local extensions through the runscript duetimes.extension files" />
     <MESSAGE value="Fixed typing info to be Py2 compatible" />
@@ -481,13 +488,22 @@
     <MESSAGE value="Updated README.md with example" />
     <MESSAGE value="Fixed README.md example" />
     <MESSAGE value="Added runscript output parsing functionality (at least for 126 output)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added runscript output parsing functionality (at least for 126 output)" />
+    <MESSAGE value="v0.0.22" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.0.22" />
   </component>
   <component name="WindowStateProjectService">
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1581251006850">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581251006850" />
+    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1581524117225">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581524117225" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1581524119567">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581524119567" />
     <state x="494" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1581251022935">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

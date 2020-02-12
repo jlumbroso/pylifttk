@@ -126,4 +126,11 @@ def parse_runscript_output(lines):
         # logging new line
         current_log.append(line)
 
+    # add short names
+    for i in range(len(tests)):
+        shortname = "{category}-{section}-{reference}".format(**tests[i])
+        tests[i]["shortname"] = shortname
+
     return tests
+
+
