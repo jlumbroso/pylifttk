@@ -123,7 +123,7 @@ def trigger_tests(autograder_output=None, autograder_output_filename=None, mappi
     parsed_tests = pylifttk.runscript.parser.parse_runscript_output(autograder_lines)
 
     def trigger_codePost_submission_test(testCase_id, passed=False, log=""):
-        with open("./outputs/{}.json".format(testCase_id), "w") as file:
+        with open("/outputs/{}.json".format(testCase_id), "w") as file:
             json_data = _json.dump({
                 "id": testCase_id,
                 "passed": passed,
