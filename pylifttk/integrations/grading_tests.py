@@ -106,7 +106,7 @@ def add_tests(a, tests):
     return test_mapping
 
 
-def trigger_tests(autograder_output=None, autograder_output_filename=None, mapping_filename=None, mapping_data=None):
+def trigger_tests(autograder_output=None, autograder_output_filename=None, mapping_filename=None, mapping_data=None, prefix=None):
 
     if autograder_output is None and autograder_output_filename is not None:
         autograder_output = open(autograder_output_filename).read()
@@ -122,8 +122,11 @@ def trigger_tests(autograder_output=None, autograder_output_filename=None, mappi
 
     parsed_tests = pylifttk.runscript.parser.parse_runscript_output(autograder_lines)
 
-    def trigger_codePost_submission_test(testCase_id, passed=False, log=""):
-        with open("/outputs/{}.json".format(testCase_id), "w") as file:
+    def trigger_codePost_submission_test(testCase_id, passed=False, log="", prefix=None):
+        if prefix is None:
+            prefix = ""
+        path = "{}/outputs/{}.json".format(prefix, testCase_id)
+        with open(path, "w") as file:
             json_data = _json.dump({
                 "id": testCase_id,
                 "passed": passed,
@@ -149,7 +152,8 @@ def trigger_tests(autograder_output=None, autograder_output_filename=None, mappi
         trigger_codePost_submission_test(
             testCase_id=mapping_data.get(key),
             passed=test.get("passed"),
-            log=test.get("log")
+            log=test.get("log"),
+            prefix=prefix
         )
 
     return missing_tests

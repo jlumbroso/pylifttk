@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pylifttk/integrations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/integrations/grading_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/integrations/grading_tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
@@ -127,7 +126,7 @@
       <workItem from="1581250841932" duration="26000" />
       <workItem from="1581250883278" duration="127000" />
       <workItem from="1581251023933" duration="451000" />
-      <workItem from="1581521104951" duration="3437000" />
+      <workItem from="1581521104951" duration="3994000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -458,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581530037783</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="v0.0.26">
+      <created>1581531682630</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1581531682631</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +484,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed typing info to be Py2 compatible" />
     <MESSAGE value="Added name normalization logic" />
     <MESSAGE value="Fixed variable scope bug with normalization logic" />
     <MESSAGE value="Added support for extensions in Tigerfile lateness calculations" />
@@ -503,21 +508,22 @@
     <MESSAGE value="v0.0.22" />
     <MESSAGE value="codePost autograder integration code, v0.0.23" />
     <MESSAGE value="Fixed internal codePost-related bug, v0.0.24" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed internal codePost-related bug, v0.0.24" />
+    <MESSAGE value="v0.0.26" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.0.26" />
   </component>
   <component name="WindowStateProjectService">
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1581251006850">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581251006850" />
-    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1581530037619">
+    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1581531682434">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581530037619" />
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1581530039479">
+    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581531682434" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1581531684008">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581530039479" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581531684008" />
     <state x="494" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1581251022935">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
