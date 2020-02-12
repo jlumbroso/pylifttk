@@ -4,7 +4,7 @@ import json as _json
 import codepost as _codepost
 import yaml as _yaml
 
-import pylifttk.runscript
+import pylifttk.runscript.parser
 
 
 # FIXME: clean-up this mess!

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pylifttk/integrations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/integrations/grading_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/integrations/grading_tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
@@ -126,7 +127,7 @@
       <workItem from="1581250841932" duration="26000" />
       <workItem from="1581250883278" duration="127000" />
       <workItem from="1581251023933" duration="451000" />
-      <workItem from="1581521104951" duration="2237000" />
+      <workItem from="1581521104951" duration="3437000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -450,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581529970463</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Fixed internal codePost-related bug, v0.0.24">
+      <created>1581530037783</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1581530037783</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +478,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added support for legacy local extensions through the runscript duetimes.extension files" />
     <MESSAGE value="Fixed typing info to be Py2 compatible" />
     <MESSAGE value="Added name normalization logic" />
     <MESSAGE value="Fixed variable scope bug with normalization logic" />
@@ -495,25 +502,34 @@
     <MESSAGE value="Added runscript output parsing functionality (at least for 126 output)" />
     <MESSAGE value="v0.0.22" />
     <MESSAGE value="codePost autograder integration code, v0.0.23" />
-    <option name="LAST_COMMIT_MESSAGE" value="codePost autograder integration code, v0.0.23" />
+    <MESSAGE value="Fixed internal codePost-related bug, v0.0.24" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed internal codePost-related bug, v0.0.24" />
   </component>
   <component name="WindowStateProjectService">
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1581251006850">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581251006850" />
-    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1581529970265">
+    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1581530037619">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581529970265" />
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1581529972280">
+    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581530037619" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1581530039479">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581529972280" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581530039479" />
     <state x="494" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1581251022935">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="494" y="371" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581251022935" />
+    <state x="227" y="159" width="1200" height="787" key="dock-window-1" timestamp="1581530872749">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="227" y="159" width="1200" height="787" key="dock-window-1/0.23.1680.1027@0.23.1680.1027" timestamp="1581530872749" />
+    <state x="227" y="159" width="1200" height="787" key="dock-window-2" timestamp="1581530872749">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="227" y="159" width="1200" height="787" key="dock-window-2/0.23.1680.1027@0.23.1680.1027" timestamp="1581530872749" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pylifttk$ungraded.coverage" NAME="ungraded Coverage Results" MODIFIED="1580171027505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pylifttk/integrations" />
