@@ -130,7 +130,7 @@ def trigger_tests(autograder_output=None, autograder_output_filename=None, mappi
             json_data = _json.dump({
                 "id": testCase_id,
                 "passed": passed,
-                "log": log
+                "log": "\n".join(log),
             }, file)
 
     missing_tests = 0

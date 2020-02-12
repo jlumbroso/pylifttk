@@ -126,7 +126,7 @@
       <workItem from="1581250841932" duration="26000" />
       <workItem from="1581250883278" duration="127000" />
       <workItem from="1581251023933" duration="451000" />
-      <workItem from="1581521104951" duration="3994000" />
+      <workItem from="1581521104951" duration="4370000" />
     </task>
     <task id="LOCAL-00001" summary="More boilerplate configuration and package setup">
       <created>1571370875168</created>
@@ -464,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581531682631</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Trigger to prefix directory v0.0.27">
+      <created>1581532966580</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1581532966580</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +491,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added name normalization logic" />
     <MESSAGE value="Fixed variable scope bug with normalization logic" />
     <MESSAGE value="Added support for extensions in Tigerfile lateness calculations" />
     <MESSAGE value="Lateness calculations integrated in Tigerfile, v.0.0.15" />
@@ -509,21 +515,22 @@
     <MESSAGE value="codePost autograder integration code, v0.0.23" />
     <MESSAGE value="Fixed internal codePost-related bug, v0.0.24" />
     <MESSAGE value="v0.0.26" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.0.26" />
+    <MESSAGE value="Trigger to prefix directory v0.0.27" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trigger to prefix directory v0.0.27" />
   </component>
   <component name="WindowStateProjectService">
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1581251006850">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581251006850" />
-    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1581531682434">
+    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1581532966295">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581531682434" />
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1581531684008">
+    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581532966295" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1581532968126">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581531684008" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581532968126" />
     <state x="494" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1581251022935">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
