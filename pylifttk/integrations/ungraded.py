@@ -1,7 +1,9 @@
 
-import itertools
+import datetime as _datetime
+import itertools as _itertools
 
 import codepost as _codepost
+import dateutil as _dateutil
 
 import pylifttk.codepost
 import pylifttk.codepost.macros
@@ -80,7 +82,8 @@ def get_ungraded_codepost_assignment(cp_course_id, cp_assignment_id, tf_assignme
         username = email.split("@")[0]
         return memberships.get(username) is None
 
-    non_submitting_students = list(filter(has_not_submitted, itertools.chain.from_iterable(ungraded.values())))
+    non_submitting_students = list(filter(has_not_submitted,
+                                          _itertools.chain.from_iterable(ungraded.values())))
 
     for subcategory in ungraded.keys():
         ungraded[subcategory] = list(
@@ -128,7 +131,7 @@ def get_ungraded_codepost_assignments(course_name, course_term, codepost_course_
             "codePost-course-id": codepost_course_id,
             "codePost-assignment-id": cp_assignment_id,
             "tigerfile-dropbox-id": tigerfile_dropbox_id,
-            "tigerfile-assignmnent-id": tf_assignment_id,
+            "tigerfile-assignment-id": tf_assignment_id,
             "ungraded": assignment_ungraded_info
         }
         info[assignment_name] = record
@@ -136,15 +139,39 @@ def get_ungraded_codepost_assignments(course_name, course_term, codepost_course_
     return info
 
 
-def generate_tigerfile_to_codepost_script(course_name, course_term):
+def generate_tigerfile_to_codepost_script(course_name, course_term, only_past_due=True, ungraded_infos=None):
 
-    assignment_ungraded_infos = pylifttk.integrations.ungraded.get_ungraded_codepost_assignments(
+    assignment_ungraded_infos = ungraded_infos or pylifttk.integrations.ungraded.get_ungraded_codepost_assignments(
         course_name=course_name,
         course_term=course_term
     )
     script = []
     for assignment_info in assignment_ungraded_infos.values():
-        tf_assignment_name = assignment_info["name"]
+
+        # Check if the assignment is past due
+        if only_past_due:
+            if "tigerfile-assignment-id" not in assignment_info:
+                continue
+
+            full_assignment_info = pylifttk.tigerfile.get_assignments(
+                id=assignment_info["tigerfile-assignment-id"])
+
+            if len(full_assignment_info) == 0:
+                continue
+
+            raw_due_date = full_assignment_info[0].get("due_date")
+
+            if raw_due_date is None or raw_due_date == "":
+                continue
+
+            due_date = _dateutil.parser.parse(raw_due_date)
+
+            # The due date has not yet passed
+
+            if _datetime.datetime.now(due_date.tzinfo) < due_date:
+                continue
+
+        tf_assignment_name = assignment_info["tigerfile-name"]
         rs_assignment_name = pylifttk.normalizations.normalize(
             tf_assignment_name,
             pylifttk.normalizations.PyLIFTtkNormalizationType.tigerfile,
@@ -179,5 +206,6 @@ def generate_tigerfile_to_codepost_script(course_name, course_term):
                     assignment_name=cp_assignment_name,
                     submissions=" ".join(submission_ids),
                 ))
+
     return "\n".join(script)
 

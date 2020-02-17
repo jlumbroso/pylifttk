@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/integrations/ungraded.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/integrations/ungraded.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
     </list>
@@ -130,14 +128,7 @@
       <workItem from="1581251023933" duration="451000" />
       <workItem from="1581521104951" duration="4917000" />
       <workItem from="1581781588653" duration="332000" />
-      <workItem from="1581968933030" duration="368000" />
-    </task>
-    <task id="LOCAL-00003" summary="Added raw request method for CSstaff's Course API">
-      <created>1571536650707</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1571536650707</updated>
+      <workItem from="1581968933030" duration="1651000" />
     </task>
     <task id="LOCAL-00004" summary="Added code to interact with the Ed platform">
       <created>1571538469807</created>
@@ -475,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581534240758</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Fixed bug in ungraded module, v0.0.30">
+      <created>1581969374030</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1581969374031</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +493,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Lateness calculations integrated in Tigerfile, v.0.0.15" />
     <MESSAGE value="Fixed minor bug in extension calculation, v.0.0.16" />
     <MESSAGE value="Fixes in the extension code" />
     <MESSAGE value="v0.0.17" />
@@ -520,21 +517,22 @@
     <MESSAGE value="Trigger to prefix directory v0.0.27" />
     <MESSAGE value="Fixed &quot;log&quot; key output bug v0.0.28" />
     <MESSAGE value="Output testcase &quot;id&quot; as str instead int, v0.0.29" />
-    <option name="LAST_COMMIT_MESSAGE" value="Output testcase &quot;id&quot; as str instead int, v0.0.29" />
+    <MESSAGE value="Fixed bug in ungraded module, v0.0.30" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in ungraded module, v0.0.30" />
   </component>
   <component name="WindowStateProjectService">
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1581251006850">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581251006850" />
-    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1581534240492">
+    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1581969373748">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581534240491" />
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1581534242960">
+    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581969373748" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1581969376023">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581534242960" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581969376023" />
     <state x="494" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1581781590242">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -547,6 +545,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="227" y="159" width="1200" height="787" key="dock-window-2/0.23.1680.1027@0.23.1680.1027" timestamp="1581530872749" />
+    <state x="485" y="309" width="683" height="486" key="find.popup" timestamp="1581970473735">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="485" y="309" width="683" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1581970473735" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pylifttk$ungraded.coverage" NAME="ungraded Coverage Results" MODIFIED="1580171027505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pylifttk/integrations" />
