@@ -34,7 +34,7 @@ def find_assignment_ids(course_name, course_term, codepost_course_id=None, tiger
     # Find tigerfile assignment ids
     tigerfile_assignments = dict()
 
-    assignments = pylifttk.tigerfile.get_assignments(dropbox_id=28)
+    assignments = pylifttk.tigerfile.get_assignments(dropbox_id=tigerfile_dropbox_id)
     for assignment in assignments:
         if "name" in assignment and "id" in assignment:
             tigerfile_assignments[assignment["name"]] = assignment["id"]
@@ -51,6 +51,10 @@ def find_assignment_ids(course_name, course_term, codepost_course_id=None, tiger
             pylifttk.normalizations.PyLIFTtkNormalizationType.tigerfile)
 
         target_name = tf_name
+
+        if target_name is None:
+            # Is not on Tigerfile
+            continue
 
         result[target_name] = (cp_id, tigerfile_assignments[tf_name])
 
