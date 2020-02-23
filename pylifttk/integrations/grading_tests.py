@@ -38,7 +38,7 @@ def reset_tests(a):
     return deleted_testcategories, deleted_testcases
 
 
-def add_tests(a, tests, category_name_format="{section}", test_description_format="Test {reference}"):
+def add_tests(a, tests, category_name_format="{category}", test_description_format="{section}: Test {reference}"):
     # {'category': 'correctness',
     #  'section': 'LFSR',
     #  'reference': '1',

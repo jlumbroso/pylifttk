@@ -130,14 +130,7 @@
       <workItem from="1581781588653" duration="332000" />
       <workItem from="1581968933030" duration="1888000" />
       <workItem from="1582002619418" duration="27000" />
-      <workItem from="1582494994964" duration="121000" />
-    </task>
-    <task id="LOCAL-00005" summary="Fix for Python 2.x compatibility">
-      <created>1571539004437</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1571539004437</updated>
+      <workItem from="1582494994964" duration="679000" />
     </task>
     <task id="LOCAL-00006" summary="Other fix for Python 2.x compatibility">
       <created>1571540054179</created>
@@ -475,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581971107854</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Expanded `add_tests` to customize formatting, v0.0.32">
+      <created>1582495141408</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1582495141410</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +495,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixes in the extension code" />
     <MESSAGE value="v0.0.17" />
     <MESSAGE value="Extensions handling in CSV export of lateness, v0.0.18" />
     <MESSAGE value="v0.0.19" />
@@ -520,21 +519,22 @@
     <MESSAGE value="Output testcase &quot;id&quot; as str instead int, v0.0.29" />
     <MESSAGE value="Fixed bug in ungraded module, v0.0.30" />
     <MESSAGE value="Fixed other bug in ungraded module, v0.0.31" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed other bug in ungraded module, v0.0.31" />
+    <MESSAGE value="Expanded `add_tests` to customize formatting, v0.0.32" />
+    <option name="LAST_COMMIT_MESSAGE" value="Expanded `add_tests` to customize formatting, v0.0.32" />
   </component>
   <component name="WindowStateProjectService">
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1581251006850">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581251006850" />
-    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1581971107596">
+    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1582495140944">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581971107596" />
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1581971109718">
+    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1582495140944" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1582495143378">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581971109718" />
+    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1582495143378" />
     <state x="494" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1582002627750">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
