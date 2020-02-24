@@ -1,10 +1,70 @@
 
+import glob as _glob
 import json as _json
 
 import codepost as _codepost
 import yaml as _yaml
 
+import pylifttk
 import pylifttk.runscript.parser
+
+
+def _hd(lst):
+    """
+    Returns the first element of `lst` or `None` otherwise.
+
+    :param lst: A list
+    :return: The first element of the list
+    """
+    try:
+        return lst[0]
+    except:
+        return
+
+def codepost_autograder_parser_hook(assignment_name, **kwargs):
+
+    print("========================")
+    print("CODEPOST AUTOGRADER HOOK")
+    print("========================")
+    print()
+
+    mapping_filename = _hd(_glob.glob("COS126_*_{}_*.yaml".format(assignment_name)))
+
+    if mapping_filename is None:
+        print("ERROR: can't find test mapping file.")
+        return
+
+    possibilities = []
+    possibilities += _glob.glob("*{}*TESTS.txt".format(assignment_name))
+    possibilities += _glob.glob("*{}*TESTS.txt".format(assignment_name.lower()))
+    possibilities += _glob.glob("TESTS.txt")
+    possibilities += _glob.glob("*TESTS.txt")
+
+    autograder_output_filename = "TESTS.txt"
+
+    if len(possibilities) > 1:
+        print()
+        print("WARNING: multiple autograder output files detected, defaulting to TESTS.txt")
+        print(possibilities)
+        print()
+
+    elif len(possibilities) == 0:
+        print()
+        print("WARNING: no autograder output files detected, defaulting to TESTS.txt")
+        print()
+
+    else:
+        autograder_output_filename = _hd(possibilities)
+
+    print("PYLIFTTK VERSION:   {}".format(pylifttk.__version__))
+    print("ASSIGNMENT NAME:    {}".format(assignment_name))
+    print("MAPPING FILE:       {}".format(mapping_filename))
+    print("AUTOGRADER OUTPUT:  {}".format(autograder_output_filename))
+    print()
+
+    pylifttk.integrations.grading_tests.trigger_tests(
+        autograder_output_filename=autograder_output_filename,
+        mapping_filename=mapping_filename)
 
 
 # FIXME: clean-up this mess!
