@@ -14,7 +14,7 @@ pyyaml = "*"
 six = "*"
 confuse = "*"
 bs4 = "*"
-codepost = "==0.2.17"
+codepost = "*"
 enum34 = "*"
 ipykernel = "*"
 

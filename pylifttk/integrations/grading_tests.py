@@ -42,7 +42,7 @@ def codepost_autograder_parser_hook(assignment_name, **kwargs):
 
     autograder_output_filename = "TESTS.txt"
 
-    if len(possibilities) > 1:
+    if len(set(possibilities)) > 1:
         print()
         print("WARNING: multiple autograder output files detected, defaulting to TESTS.txt")
         print(possibilities)
