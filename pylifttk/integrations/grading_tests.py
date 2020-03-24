@@ -21,14 +21,16 @@ def _hd(lst):
     except:
         return
 
-def codepost_autograder_parser_hook(assignment_name, **kwargs):
+def codepost_autograder_parser_hook(assignment_name, course_name="COS126", **kwargs):
 
     print("========================")
     print("CODEPOST AUTOGRADER HOOK")
     print("========================")
     print()
 
-    mapping_filename = _hd(_glob.glob("COS126_*_{}_*.yaml".format(assignment_name)))
+    mapping_filename = _hd(_glob.glob("{course}*_{assignment}_*.yaml".format(
+        course=course_name,
+        assignment=assignment_name)))
 
     if mapping_filename is None:
         print("ERROR: can't find test mapping file.")
@@ -150,7 +152,7 @@ def add_tests(a, tests, category_name_format="{category}", test_description_form
         test_obj = _codepost.test_case.create(
             testCategory=cat_id,
             type="external",
-            description=test_description,
+            description=test_description.capitalize(),
             explanation=test["caption"].capitalize())
         test_obj.save()
 

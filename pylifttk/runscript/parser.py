@@ -3,7 +3,7 @@ import re as _re
 
 def parse_category_type(s):
     s = s.lower().strip()
-    keywords = ["correctness", "memory", "timing"]
+    keywords = ["correctness", "memory", "timing", "drawing"]
     for keyword in keywords:
         if keyword in s:
             return keyword
@@ -41,7 +41,7 @@ def parse_runscript_output(lines):
     for linenumber, line in enumerate(lines, start=1):
 
         # detect new category
-        m = _re.match(r"(Testing correctness of |Analyzing memory of |Timing )(.*)", line)
+        m = _re.match(r"(Testing correctness of |Analyzing memory of |Timing |Drawing )(.*)", line)
         if m is not None:
             # "Testing correctness of Ordered"
             current_category_type = parse_category_type(m.group(1))
