@@ -25,7 +25,7 @@ def get_auth_cookies(username=None, password=None, **kwargs):
 
     session = _requests.sessions.session()
 
-    # Step 1: Get an "authenticity token" and start the GradeScope session
+    # Step 1: Get an "authenticity token" and start the Gradescope session
 
     try:
         response = session.get(BASE_URL)

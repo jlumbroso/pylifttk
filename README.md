@@ -12,7 +12,7 @@ This library integrates:
 - Ed Discussion (roster);
 - CSStaff Course API (roster, assignments);
 - TigerFile (roster, assignments, submissions);
-- GradeScope (roster, grades).
+- Gradescope (roster, grades).
 
 
 ## Configuration file
