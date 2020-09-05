@@ -125,7 +125,7 @@ def add_tests(a, tests, category_name_format="{category}", test_description_form
 
     cat_names = {
         category_name_format.format(
-            category=test["category"].capitalize(),
+            category=test["category"],
             section=test["section"])
         for test in tests
     }
@@ -143,7 +143,7 @@ def add_tests(a, tests, category_name_format="{category}", test_description_form
     # Create the test cases
     for test in tests:
         cat_name = category_name_format.format(
-            category=test["category"].capitalize(),
+            category=test["category"],
             section=test["section"])
         cat_id = cat_lookup.get(cat_name)
 
