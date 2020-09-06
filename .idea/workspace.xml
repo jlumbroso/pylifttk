@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="13d36d99-3e68-41eb-9859-96d09ce02d8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/integrations/grading_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/integrations/grading_tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/runscript/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/runscript/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylifttk/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylifttk/version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +25,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -84,6 +81,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -132,28 +130,17 @@
       <workItem from="1581968933030" duration="1888000" />
       <workItem from="1582002619418" duration="27000" />
       <workItem from="1582494994964" duration="4668000" />
-      <workItem from="1585074607004" duration="717000" />
-    </task>
-    <task id="LOCAL-00009" summary="v0.0.5, with codepost dependency properly added to setup.py">
-      <created>1571553257296</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1571553257296</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Internal package imports refactor">
-      <created>1571588249397</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1571588249397</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Added Tigerfile integration, v0.0.10">
-      <created>1571609135455</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1571609135455</updated>
+      <workItem from="1585074607004" duration="1286000" />
+      <workItem from="1585634616362" duration="9000" />
+      <workItem from="1585953569632" duration="718000" />
+      <workItem from="1586437679382" duration="15000" />
+      <workItem from="1586986711156" duration="644000" />
+      <workItem from="1588981327205" duration="575000" />
+      <workItem from="1589893602354" duration="63390000" />
+      <workItem from="1590857753104" duration="6000" />
+      <workItem from="1591329504119" duration="36000" />
+      <workItem from="1599250348914" duration="2332000" />
+      <workItem from="1599316638977" duration="890000" />
     </task>
     <task id="LOCAL-00012" summary="Added macros to codePost and Gradescope integration; added roster_sync integration.">
       <created>1571716639494</created>
@@ -477,29 +464,46 @@
       <option name="project" value="LOCAL" />
       <updated>1582504591222</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Support for &quot;drawing&quot; tests (Sierpinski), v0.0.36">
+      <created>1585075433770</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1585075433778</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Setting the record straight (thanks to @cycomachead :-)">
+      <created>1585953752935</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1585953752936</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Added `codepost_test_transfer.py` script">
+      <created>1599268090443</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1599268090444</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Integration code to detect and process ungraded submissions from Tigerfile to codePost." />
-    <MESSAGE value="Fix in ungraded script generation for reverse name changes." />
-    <MESSAGE value="Fix for Gradescope assignments (only active ones were being listed correctly), v0.0.20." />
     <MESSAGE value="Added code to extract aggreggate grades for a course; extended config default format" />
     <MESSAGE value="Added code to extract aggregate grades for a course; extended config default format" />
     <MESSAGE value="Integrated name normalization in ungraded integration methods" />
@@ -522,37 +526,24 @@
     <MESSAGE value="Changed default caption for `add_tests`, v0.0.33" />
     <MESSAGE value="Added `codepost_autograder_parser_hook`, v0.0.34" />
     <MESSAGE value="Minor bug fix, v0.0.35" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor bug fix, v0.0.35" />
+    <MESSAGE value="Support for &quot;drawing&quot; tests (Sierpinski), v0.0.36" />
+    <MESSAGE value="Setting the record straight (thanks to @cycomachead :-)" />
+    <MESSAGE value="Added `codepost_test_transfer.py` script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added `codepost_test_transfer.py` script" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1581251006850">
+    <state x="417" y="114" key="CommitChangelistDialog2" timestamp="1599268090225">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="562" y="414" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581251006850" />
-    <state x="372" y="156" key="CommitChangelistDialog2" timestamp="1582504591044">
+    <state x="417" y="114" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1599268090225" />
+    <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1599268092246">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="372" y="156" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1582504591044" />
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2" timestamp="1582504592996">
+    <state x="440" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1599268092246" />
+    <state x="517" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1591329536249">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="427" y="292" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1582504592996" />
-    <state x="494" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1582002627750">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state x="494" y="371" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1582002627750" />
-    <state x="227" y="159" width="1200" height="787" key="dock-window-1" timestamp="1581530872749">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state x="227" y="159" width="1200" height="787" key="dock-window-1/0.23.1680.1027@0.23.1680.1027" timestamp="1581530872749" />
-    <state x="227" y="159" width="1200" height="787" key="dock-window-2" timestamp="1581530872749">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state x="227" y="159" width="1200" height="787" key="dock-window-2/0.23.1680.1027@0.23.1680.1027" timestamp="1581530872749" />
-    <state x="485" y="309" width="683" height="486" key="find.popup" timestamp="1581970473735">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state x="485" y="309" width="683" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1581970473735" />
+    <state x="517" y="369" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1591329536249" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pylifttk$ungraded.coverage" NAME="ungraded Coverage Results" MODIFIED="1580171027505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pylifttk/integrations" />

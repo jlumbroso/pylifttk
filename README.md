@@ -1,5 +1,8 @@
 # pylifttk
 
+[![Downloads](https://pepy.tech/badge/pylifttk)](https://pepy.tech/project/pylifttk)
+[![Downloads](https://pepy.tech/badge/pylifttk/month)](https://pepy.tech/project/pylifttk/month)
+
 This is a Python utility library for Princeton COS' LIFT.
 
 This library tries to conveniently integrate a collection of educational tech tools used at Princeton's Department of Computer Science, to facilitate exchanges of data between those platforms.
