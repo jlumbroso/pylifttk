@@ -26,14 +26,24 @@ def invite_many_students(course_id, students, append=True):
     )
 
 
-def set_course_sections(course_id, section_dict):
+def set_course_sections(course_id, section_dict, create_missing=False):
 
     sections_name_to_id = {}
     for section in _codepost.course.retrieve(id=course_id).sections:
         sections_name_to_id[section.name] = section.id
 
     for section_name, roster in section_dict.items():
+
         if section_name not in sections_name_to_id:
+
+            if create_missing:
+                section = _codepost.section.update(
+                    name=section_name,
+                    course=course_id,
+                    students=roster,
+                )
+                sections_name_to_id[section.name] = section.id
+
             continue
 
         section_id = sections_name_to_id[section_name]
