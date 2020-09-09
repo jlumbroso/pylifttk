@@ -17,6 +17,7 @@ bs4 = "*"
 codepost = "*"
 enum34 = "*"
 ipykernel = "*"
+canvasapi = "*"
 
 [requires]
 python_version = "3.8"

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "1148f2565fb2c59fb4b7eedb6d92eb3393a70d342537994eb35c72af5488b7b5"
+            "sha256": "b8bbbfadae209ab8c58214114f3dfa9c380a00f7c86999796e4ba0f7002f8a87"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -60,6 +60,13 @@
             ],
             "index": "pypi",
             "version": "==0.0.1"
+        },
+        "canvasapi": {
+            "hashes": [
+                "sha256:d2af62c3f643cbf25024ea094212c9b2374c68c9e03932154079613483fc38c2"
+            ],
+            "index": "pypi",
+            "version": "==2.0.0"
         },
         "certifi": {
             "hashes": [
@@ -216,9 +223,9 @@
         },
         "pyrsistent": {
             "hashes": [
-                "sha256:28669905fe725965daa16184933676547c5bb40a5153055a8dee2a4bd7933ad3"
+                "sha256:8690178e75460d3afe32d6222feed1ca1fdd4ef7317f6d8b42147bcce5f9ee75"
             ],
-            "version": "==0.16.0"
+            "version": "==0.17.0"
         },
         "python-dateutil": {
             "hashes": [
@@ -234,6 +241,13 @@
             ],
             "markers": "python_version > '3.5'",
             "version": "==18.6.0"
+        },
+        "pytz": {
+            "hashes": [
+                "sha256:a494d53b6d39c3c6e44c3bec237336e14305e4f29bbf800b599253057fbb79ed",
+                "sha256:c35965d010ce31b23eeb663ed3cc8c906275d6be1a34393a1d73a41febf4a048"
+            ],
+            "version": "==2020.1"
         },
         "pywsse": {
             "hashes": [
@@ -331,10 +345,10 @@
         },
         "traitlets": {
             "hashes": [
-                "sha256:8bdadb17a04c844f444cdefaa3dee47a12ff14cf6277b9eeda29bfa0659d5987",
-                "sha256:a2e91709a0330b6c5d497ed470b2feb1ed8da5c9dd807c6daab41f727b9391c9"
+                "sha256:86c9351f94f95de9db8a04ad8e892da299a088a64fd283f9f6f18770ae5eae1b",
+                "sha256:9664ec0c526e48e7b47b7d14cd6b252efa03e0129011de0a9c1d70315d4309c3"
             ],
-            "version": "==5.0.3"
+            "version": "==5.0.4"
         },
         "typing": {
             "hashes": [
@@ -577,10 +591,10 @@
         },
         "traitlets": {
             "hashes": [
-                "sha256:8bdadb17a04c844f444cdefaa3dee47a12ff14cf6277b9eeda29bfa0659d5987",
-                "sha256:a2e91709a0330b6c5d497ed470b2feb1ed8da5c9dd807c6daab41f727b9391c9"
+                "sha256:86c9351f94f95de9db8a04ad8e892da299a088a64fd283f9f6f18770ae5eae1b",
+                "sha256:9664ec0c526e48e7b47b7d14cd6b252efa03e0129011de0a9c1d70315d4309c3"
             ],
-            "version": "==5.0.3"
+            "version": "==5.0.4"
         },
         "wcwidth": {
             "hashes": [

@@ -21,7 +21,7 @@ def invite_many_students(course_id, students, append=True):
                 roster.append(student)
 
     _codepost.roster.update(
-        id=1,
+        id=course_id,
         students=roster
     )
 
