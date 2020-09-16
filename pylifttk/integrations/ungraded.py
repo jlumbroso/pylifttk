@@ -139,7 +139,7 @@ def get_ungraded_codepost_assignments(course_name, course_term, codepost_course_
     return info
 
 
-def generate_tigerfile_to_codepost_script(course_name, course_term, only_past_due=True, ungraded_infos=None):
+def generate_tigerfile_to_codepost_script(course_name, course_term, only_past_due=True, ungraded_infos=None, remove_notdone=True):
 
     assignment_ungraded_infos = ungraded_infos or pylifttk.integrations.ungraded.get_ungraded_codepost_assignments(
         course_name=course_name,
@@ -196,6 +196,8 @@ def generate_tigerfile_to_codepost_script(course_name, course_term, only_past_du
             submission_ids.append(submission_id)
 
         if len(submission_ids) > 0:
+            if remove_notdone:
+                script.append("find . -name NOTDONE | xargs dirname | xargs rm -Rf")
             script.append(
                 "~/assignments/{assignment_name}/run-script {submissions} | tee runscript-{assignment_name}.log".format(
                     assignment_name=rs_assignment_name,
